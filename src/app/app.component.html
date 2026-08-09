@@ -1,0 +1,14 @@
+<app-loader></app-loader>
+<app-paint-cursor></app-paint-cursor>
+<app-paint-background></app-paint-background>
+<div class="canvas-texture" aria-hidden="true"></div>
+<app-navbar></app-navbar>
+
+<div class="page">
+  <router-outlet></router-outlet>
+
+  <footer class="footer">
+    <button type="button" class="footer__top" (click)="scrollToTop()" aria-label="Volver arriba">↑</button>
+    <p class="footer__signature">Hecho por: Nataly Vanessa Rengifo Bautista</p>
+  </footer>
+</div>

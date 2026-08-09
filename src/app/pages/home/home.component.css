@@ -1,0 +1,117 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 180px;
+  justify-content: center;
+}
+
+.hero__floating {
+  position: absolute;
+  inset: -40px -10vw;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-tag {
+  position: absolute;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--emerald-soft);
+  opacity: 0.16;
+  white-space: nowrap;
+  filter: blur(0.3px);
+  animation: drift 14s ease-in-out infinite;
+}
+
+.floating-tag--0 {
+  top: 6%;
+  left: 4%;
+  font-size: clamp(1rem, 2.6vw, 1.6rem);
+  transform: rotate(-8deg);
+  animation-duration: 16s;
+}
+
+.floating-tag--1 {
+  top: 66%;
+  right: 2%;
+  font-size: clamp(0.9rem, 2.2vw, 1.4rem);
+  transform: rotate(6deg);
+  color: var(--gold);
+  animation-duration: 13s;
+  animation-delay: 1.5s;
+}
+
+.floating-tag--2 {
+  bottom: -6%;
+  left: 12%;
+  font-size: clamp(0.85rem, 2vw, 1.3rem);
+  transform: rotate(-3deg);
+  color: var(--terracotta);
+  animation-duration: 18s;
+  animation-delay: 3s;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0) rotate(var(--r, -8deg)); }
+  50% { transform: translateY(-14px) rotate(var(--r, -8deg)); }
+}
+
+.hero__name {
+  position: relative;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--starlight), var(--emerald-soft) 60%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__bio {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: var(--space-sm);
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 640px) {
+  /* En pantallas pequeñas la re-ubicamos en vez de ocultarla, para que
+     "Universidad El Bosque" también sea visible detrás del nombre. */
+  .floating-tag--2 {
+    bottom: auto;
+    top: 2%;
+    left: auto;
+    right: 4%;
+    font-size: clamp(0.7rem, 3vw, 0.95rem);
+    transform: rotate(4deg);
+  }
+}

@@ -1,0 +1,53 @@
+<!-- Nombre y etiquetas (Ingeniería de Sistemas, Ingeniería Robótica, Universidad El Bosque) -->
+<header class="hero" id="inicio">
+  <div class="hero__floating" aria-hidden="true">
+    @for (tag of floatingTags; track tag; let i = $index) {
+      <span class="floating-tag" [class]="'floating-tag--' + i">{{ tag }}</span>
+    }
+  </div>
+  <p class="eyebrow">Portafolio profesional</p>
+  <h1 class="hero__name">{{ name }}</h1>
+</header>
+
+<main class="main">
+  <!-- Sobre mí: Foto doble cara y descripcion con fun facts-->
+  <section class="section" id="sobre-mi" appReveal aria-label="Presentación">
+    <app-portrait-panel
+      [name]="name"
+      [photoSrc]="photoSrc"
+      [avatarSrc]="avatarSrc"
+      [funFacts]="funFacts"
+    ></app-portrait-panel>
+
+    <p class="hero__bio">
+      Actualmente curso 4 semestre de Ingenieria de Sistemas y  2 semestre de Ingeniería 
+      Robótica. Me motivan demasiado los retos intelectuales y la idea de que la tecnología 
+      transforme la medicina positivamente. Este espacio reúne mi proceso de aprendizaje: 
+      inciando en Bases de Datos.
+    </p>
+  </section>
+
+  <!-- Seccion conóceme: foto, frase y video de presentación -->
+  <section class="section" id="conoceme" appReveal aria-label="Video de presentación">
+    <app-video-section
+      [name]="name"
+      [videoUrl]="videoUrl"
+      [introPhotoSrc]="conocemePhotoSrc"
+      [vertical]="videoIsVertical"
+    ></app-video-section>
+  </section>
+
+  <!-- Evidencias -->
+  <section class="section" id="evidencias" appReveal aria-label="Evidencias ">
+    <app-evidence-gallery></app-evidence-gallery>
+  </section>
+
+  <!-- Contacto: correo personal, institucional y GitHub -->
+  <section class="section" id="contacto" appReveal aria-label="Contacto">
+    <app-contact-section
+      [personalEmail]="social.personalEmail"
+      [institutionalEmail]="social.institutionalEmail"
+      [githubUrl]="social.github"
+    ></app-contact-section>
+  </section>
+</main>

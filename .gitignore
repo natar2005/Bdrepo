@@ -1,0 +1,18 @@
+# Dependencias
+/node_modules
+
+# Build
+/dist
+/out-tsc
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Angular cache
+.angular/

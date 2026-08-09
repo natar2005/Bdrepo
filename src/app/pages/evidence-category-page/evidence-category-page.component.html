@@ -1,0 +1,44 @@
+<article class="category" appReveal>
+  <button type="button" class="category__back" (click)="goToEvidencias()">
+    <span aria-hidden="true">←</span> Volver a evidencias
+  </button>
+
+  <h1 class="category__title" [style.color]="category.accentColor">
+    {{ category.title }}<span class="category__dot">.</span>
+  </h1>
+
+  <p class="category__description">{{ category.description }}</p>
+
+  @switch (status()) {
+    @case ('loading') {
+      <p class="category__state">Cargando archivos…</p>
+    }
+    @case ('error') {
+      <p class="category__state category__state--error">
+        No fue posible cargar los archivos de esta categoría. Recarga la página.
+      </p>
+    }
+    @case ('empty') {
+      <div class="category__empty">
+        <p class="category__state">Aún no hay archivos aquí. </p>
+      </div>
+    }
+    @case ('ready') {
+      <ul class="file-list">
+        @for (file of files(); track file.url) {
+          <li class="file-list__item">
+            <a class="file-card" [href]="file.url" target="_blank" rel="noopener">
+              <span class="file-card__icon" [style.background]="category.accentColor">
+                {{ fileGlyph(file.extension) }}
+              </span>
+              <span class="file-card__info">
+                <span class="file-card__name">{{ file.name }}</span>
+                <span class="file-card__meta">{{ file.extension.toUpperCase() || 'Archivo' }} · {{ file.sizeLabel }}</span>
+              </span>
+            </a>
+          </li>
+        }
+      </ul>
+    }
+  }
+</article>
