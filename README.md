@@ -1,99 +1,211 @@
 # Nataly Vanessa Rengifo Bautista — Portafolio
 
-Portafolio profesional de Ingeniería de Sistemas e Ingeniería Robótica (Universidad El
-Bosque): proyectos, evidencias de Bases de Datos y una presentación personal,
-con una identidad visual propia inspirada en la pintura.
+Este proyecto es mi portafolio personal como estudiante de Ingeniería de Sistemas e Ingeniería Robótica en la Universidad El Bosque.
 
-**Sitio publicado:**
+La idea del portafolio nació para organizar y presentar las evidencias de **Bases de Datos 1**, pero decidí hacerlo de una forma que también me sirviera a futuro como una presentación personal y profesional. Por eso, además de las evidencias de la materia, incluí información sobre mí, algunos de mis proyectos y diferentes formas de contacto.
+
+El diseño está inspirado en la pintura, buscando que el portafolio no fuera solamente una página con información, sino que también tuviera una identidad visual propia.
 
 ## Sobre el proyecto
 
-Empecé este portafolio para Bases de Datos 1, pero lo construí pensando
-en que me sirviera más allá de la asignatura: como una carta de presentación profesional que
-pueda seguir actualizando con cada evidencia, investigación y avance de proyectos. Lo
-desarrollé en Angular .
+Desarrollé el portafolio utilizando **Angular 18**. Una de las ideas principales era que pudiera seguir actualizándolo fácilmente a medida que avance en la carrera y tenga nuevas evidencias, proyectos o investigaciones.
 
-## Tecnologías
+El sitio cuenta con una página principal donde se encuentra mi presentación, un video, las evidencias de la asignatura y la información de contacto. También tiene una página independiente para cada categoría de evidencias.
 
-- Angular 18 
-- Angular Router (con `HashLocationStrategy`, pensado para GitHub Pages)
-- TypeScript
-- Canvas API 
-- CSS con variables personalizadas para theming
-- Un pequeño script de Node (sin dependencias) para indexar archivos de evidencias
+## Tecnologías utilizadas
+
+* Angular 18
+* TypeScript
+* Angular Router
+* `HashLocationStrategy`, para facilitar el despliegue en GitHub Pages
+* Canvas API
+* CSS con variables personalizadas para manejar los estilos y colores
+* Node.js, utilizado para generar automáticamente el listado de evidencias
 
 ## Funcionalidades
 
-- **Retrato interactivo** — mi foto con marco pintado; al pasar el cursor (o hacer foco/click,
-  también accesible por teclado) cambia a una ilustración, y una paleta de colores revela
-  datos curiosos sobre mí.
-- **Evidencias de la asignatura, con páginas propias** — cinco categoría (Modelo, Normalización,
-  SQL, Investigación, Proyecto), cada una con su propio ícono.
-  Al hacer clic en una, se navega a su propia página donde se listan
-  los archivos que vaya subiendo a esa carpeta
-- **Contacto** — tarjetas con correo personal, correo institucional y GitHub.
+### Retrato interactivo
+
+Una de las partes principales de la página es mi retrato. Al pasar el cursor sobre la imagen, hacer clic o enfocarla con el teclado, cambia a una ilustración, además, alrededor del retrato aparece una paleta de colores que muestra algunos datos curiosos sobre mí.
+
+### Evidencias de Bases de Datos
+
+Las evidencias están organizadas en cinco categorías:
+
+* Modelo
+* Normalización
+* SQL
+* Investigación
+* Proyecto
+
+Cada categoría tiene su propio ícono y página. Desde allí se pueden consultar los archivos que se encuentren dentro de la carpeta correspondiente.
+
+La idea es poder agregar nuevas evidencias sin tener que modificar manualmente la página cada vez.
+
+### Contacto
+
+La página también cuenta con diferentes opciones para contactarme:
+
+* Correo personal
+* Correo institucional
+* GitHub
 
 ## Instalación y ejecución local
 
-Requiere Node.js 18 o superior.
+Para ejecutar el proyecto localmente se necesita **Node.js 18 o superior**.
+
+Primero se instalan las dependencias:
 
 ```bash
 npm install
+```
+
+Luego se inicia el proyecto:
+
+```bash
 npm start
 ```
 
-## Cómo subir evidencias (Modelo, Normalización, SQL, Investigación, Proyecto)
+También se puede generar una compilación para producción con:
 
-Angular compila el sitio como archivos estáticos, así que no puede "leer una carpeta"
-del computador en tiempo real. Para que de todos modos sea tan simple como arrastrar un
-archivo, el proyecto indexa esas carpetas automáticamente antes de cada `npm start` /
-`npm run build`:
+```bash
+npm run build
+```
 
-1. Se debe ubicar la carpeta de la categoría dentro de `src/assets/evidencias/`:
-   - `src/assets/evidencias/modelo/`
-   - `src/assets/evidencias/normalizacion/`
-   - `src/assets/evidencias/sql/`
-   - `src/assets/evidencias/investigacion/`
-   - `src/assets/evidencias/proyecto/`
-2. Se debe copiar ahí los archivos .
-3. Correr `npm start` o `npm run build` como siempre (o, si el sitio ya está corriendo,
-   `npm run evidencias:index` y se deberá recargar la página).
-Nota:
-El script `scripts/generate-evidence-manifest.js` recorre cada carpeta y
-genera un `manifest.json` con la lista de archivos encontrados; la página de cada
-categoría (`EvidenceCategoryPageComponent`) simplemente lee ese `manifest.json` por HTTP.
+## ¿Cómo agregar nuevas evidencias?
 
+Angular genera el sitio como archivos estáticos, por lo que no puede estar revisando directamente las carpetas del computador mientras la página está funcionando.
 
+Para solucionar esto, hice un pequeño script que revisa automáticamente las carpetas de evidencias y genera un `manifest.json` con los archivos encontrados.
 
+### 1. Entrar a la carpeta de evidencias
+
+Las carpetas están organizadas de esta manera:
+
+```text
+src/assets/evidencias/
+├── modelo/
+├── normalizacion/
+├── sql/
+├── investigacion/
+└── proyecto/
+```
+
+### 2. Copiar la evidencia
+
+Solo hay que colocar el archivo correspondiente dentro de la carpeta de la categoría.
+
+Por ejemplo:
+
+```text
+src/assets/evidencias/sql/nombrearchivo.pdf
+```
+
+### 3. Actualizar el listado
+
+Al ejecutar:
+
+```bash
+npm start
+```
+
+o:
+
+```bash
+npm run build
+```
+
+el proyecto genera automáticamente el listado de archivos.
+
+Si la página ya está ejecutándose y se agrega una evidencia nueva, también se puede ejecutar:
+
+```bash
+npm run evidencias:index
+```
+
+Después de esto solo es necesario recargar la página.
+
+El encargado de hacer este proceso es:
+
+```text
+scripts/generate-evidence-manifest.js
+```
+
+Este script recorre las carpetas de cada categoría y genera un `manifest.json` con los archivos encontrados.
+
+Luego, el componente `EvidenceCategoryPageComponent` lee ese archivo para mostrar las evidencias en la página.
 
 ## Estructura del proyecto
 
-```
+```text
 src/
   app/
-    app.component.ts/html/css        → global: loader, cursor, fondo, navbar, footer
-    app.routes.ts                    → rutas: home  y una por cada categoría de evidencias
-    app.config.ts                    → providers: Router (hash) y HttpClient
+    app.component.ts/html/css
+        → Elementos generales de la aplicación: loader, cursor,
+          fondo, navbar y footer
+
+    app.routes.ts
+        → Rutas de la página principal y las categorías de evidencias
+
+    app.config.ts
+        → Configuración del Router y HttpClient
+
     pages/
-      home/                          → página de inicio (Nombre, Sobre mí, Video, Evidencias, Contacto)
-      evidence-category-page/        → página para cada categoría(una pagina para las n evidencias)
-        evidence-categories.ts       → slugs, títulos, colores, íconos
+      home/
+        → Página principal: presentación, sobre mí, video,
+          evidencias y contacto
+
+      evidence-category-page/
+        → Página utilizada para mostrar las evidencias de cada categoría
+
+        evidence-categories.ts
+          → Configuración de nombres, títulos, colores e íconos
+            de las categorías
+
     components/
-      paint-background/              → fondo animado
-      paint-cursor/                  → cursor personalizado (gota de pintura)
-      app-loader/                    → pantalla de carga inicial con nombre escrito
-      navbar/                        → navegación fija, con scroll-spy y soporte de rutas
-      portrait-panel/                → retrato interactivo y datos curiosos
-      video-section/                 → tarjeta del video de presentación
-      evidence-gallery/              → menú de evidencias
-      contact-section/               → opciones de contacto
+      paint-background/
+        → Fondo animado inspirado en pintura
+
+      paint-cursor/
+        → Cursor personalizado con forma de gota de pintura
+
+      app-loader/
+        → Pantalla de carga inicial
+
+      navbar/
+        → Barra de navegación fija, scroll-spy y navegación entre rutas
+
+      portrait-panel/
+        → Retrato interactivo y datos curiosos
+
+      video-section/
+        → Sección del video de presentación
+
+      evidence-gallery/
+        → Menú de categorías de evidencias
+
+      contact-section/
+        → Información y opciones de contacto
+
     directives/
-      reveal-on-scroll.directive.ts  → fade-in al hacer scroll 
+      reveal-on-scroll.directive.ts
+        → Animaciones de aparición al hacer scroll
+
   assets/
-    images/                          → fotos 
-    evidencias/                      → carpetas de evidencias
-    videos/                          → video presentación
-  styles.css                         → paleta de colores y tipografía base 
+    images/
+        → Imágenes utilizadas en el portafolio
+
+    evidencias/
+        → Carpetas donde se guardan las evidencias
+
+    videos/
+        → Video de presentación
+
+  styles.css
+    → Estilos generales, colores y tipografía
+
 scripts/
-  generate-evidence-manifest.js      → indexa las carpetas de evidencias
+  generate-evidence-manifest.js
+    → Script encargado de generar los manifest de evidencias
 ```
+
