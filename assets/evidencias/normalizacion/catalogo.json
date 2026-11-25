@@ -1,0 +1,31 @@
+{
+  "introduccion": "Para practicar la normalización trabajé dos casos en Excel. En cada uno parto de la tabla en primera y segunda forma normal y la llevo, paso a paso, hasta tercera forma normal. En cada paso explico qué dependencia se corrige, qué pasaría en el negocio si no se corrigiera y cómo queda el esquema.",
+  "grupos": [
+    {
+      "carpeta": "taller",
+      "titulo": "",
+      "archivos": {
+        "taller-normalizacion.xlsx": {
+          "titulo": "Taller de normalización",
+          "descripcion": "Dos casos: las citas de una clínica y las ventas de una cadena de sucursales.",
+          "hojas": {
+            "Esquema1": "Caso 1 · Citas de una clínica",
+            "Esquema2": "Caso 2 · Ventas por sucursal"
+          }
+        }
+      }
+    }
+  ],
+  "relacionados": [
+    {
+      "ruta": "proyecto/diseno-bd/normalizacion-archiveludo.pdf",
+      "titulo": "Normalización del proyecto ArchiveLudo",
+      "descripcion": "La misma técnica aplicada a las tablas reales del proyecto final, con el antes y el después."
+    },
+    {
+      "ruta": "investigacion/modelo-relacional-normalizacion.pdf",
+      "titulo": "El modelo relacional y la normalización",
+      "descripcion": "Mi investigación sobre las formas normales, de la 1FN a Boyce-Codd."
+    }
+  ]
+}

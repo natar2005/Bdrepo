@@ -1,5 +1,586 @@
 {
   "category": "proyecto",
-  "generatedAt": "2026-08-09T03:33:51.093Z",
-  "files": []
+  "generatedAt": "2026-11-25T05:08:05.312Z",
+  "intro": "ArchiveLudo es nuestro proyecto final: una plataforma para la conservación y documentación del patrimonio de videojuegos. Lo hicimos en equipo con Tomás Triana y Juan Carlos Morales, y aquí está todo lo que entregamos, desde la propuesta hasta el acta de cierre.",
+  "groups": [
+    {
+      "slug": "documento-principal",
+      "title": "Documento principal",
+      "description": null,
+      "files": [
+        {
+          "name": "documento-principal-archiveludo.pdf",
+          "url": "assets/evidencias/proyecto/documento-principal/documento-principal-archiveludo.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 2441447,
+          "sizeLabel": "2.3 MB",
+          "title": "ArchiveLudo: Plataforma para la Conservación y Documentación del Patrimonio de Videojuegos",
+          "description": "El documento que reúne todo el proyecto, de principio a fin.",
+          "tag": "Entrega final",
+          "featured": true,
+          "cover": "assets/evidencias/proyecto/documento-principal/_portadas/documento-principal-archiveludo.webp",
+          "downloadName": "ArchiveLudo- Plataforma para la Conservación y Documentación del Patrimonio de Videojuegos.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "planeacion",
+      "title": "Planeación y gestión",
+      "description": "Cómo arrancamos el proyecto y cómo organizamos el trabajo.",
+      "files": [
+        {
+          "name": "propuesta-proyecto.pdf",
+          "url": "assets/evidencias/proyecto/planeacion/propuesta-proyecto.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 120869,
+          "sizeLabel": "118.0 KB",
+          "title": "Propuesta de proyecto final",
+          "description": "La propuesta inicial: el problema de la preservación de videojuegos y por qué una base de datos ayuda a resolverlo.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/propuesta-proyecto.webp",
+          "downloadName": "Propuesta de proyecto final.pdf"
+        },
+        {
+          "name": "acta-de-constitucion.docx",
+          "url": "assets/evidencias/proyecto/planeacion/acta-de-constitucion.docx",
+          "extension": "docx",
+          "kind": "document",
+          "sizeBytes": 77308,
+          "sizeLabel": "75.5 KB",
+          "title": "Acta de constitución",
+          "description": "Propósito, alcance, requerimientos, objetivos, riesgos, hitos y equipo con los que se formalizó el proyecto.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/acta-de-constitucion.webp",
+          "preview": "assets/evidencias/proyecto/planeacion/_vistas/acta-de-constitucion.pdf",
+          "downloadName": "Acta de constitución.docx"
+        },
+        {
+          "name": "cronograma.docx",
+          "url": "assets/evidencias/proyecto/planeacion/cronograma.docx",
+          "extension": "docx",
+          "kind": "document",
+          "sizeBytes": 215505,
+          "sizeLabel": "210.5 KB",
+          "title": "Cronograma",
+          "description": "Las actividades y entregables del 20 de septiembre al 6 de noviembre, divididos en fases.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/cronograma.webp",
+          "preview": "assets/evidencias/proyecto/planeacion/_vistas/cronograma.pdf",
+          "downloadName": "Cronograma.docx"
+        },
+        {
+          "name": "edt-general.png",
+          "url": "assets/evidencias/proyecto/planeacion/edt-general.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 111310,
+          "sizeLabel": "108.7 KB",
+          "title": "EDT general",
+          "description": "Estructura de desglose del trabajo de todo el proyecto, por fases.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/edt-general.webp",
+          "width": 1760,
+          "height": 3962,
+          "downloadName": "EDT general.png"
+        },
+        {
+          "name": "edt-backend.png",
+          "url": "assets/evidencias/proyecto/planeacion/edt-backend.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 150697,
+          "sizeLabel": "147.2 KB",
+          "title": "EDT del backend",
+          "description": "El trabajo del backend en Spring Boot dividido en paquetes de trabajo.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/edt-backend.webp",
+          "width": 1712,
+          "height": 4718,
+          "downloadName": "EDT del backend.png"
+        },
+        {
+          "name": "edt-frontend.png",
+          "url": "assets/evidencias/proyecto/planeacion/edt-frontend.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 205417,
+          "sizeLabel": "200.6 KB",
+          "title": "EDT del frontend",
+          "description": "El trabajo del frontend en Angular dividido por pantallas y funciones.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/edt-frontend.webp",
+          "width": 1688,
+          "height": 5920,
+          "downloadName": "EDT del frontend.png"
+        },
+        {
+          "name": "documento-de-supuestos.docx",
+          "url": "assets/evidencias/proyecto/planeacion/documento-de-supuestos.docx",
+          "extension": "docx",
+          "kind": "document",
+          "sizeBytes": 34461,
+          "sizeLabel": "33.7 KB",
+          "title": "Documento de supuestos",
+          "description": "Las reglas del negocio que asumimos para cada entidad. De aquí salieron las restricciones de la base de datos.",
+          "cover": "assets/evidencias/proyecto/planeacion/_portadas/documento-de-supuestos.webp",
+          "preview": "assets/evidencias/proyecto/planeacion/_vistas/documento-de-supuestos.pdf",
+          "downloadName": "Documento de supuestos.docx"
+        }
+      ]
+    },
+    {
+      "slug": "diseno-bd",
+      "title": "Diseño de la base de datos",
+      "description": "Los modelos completos están en la sección Modelo; aquí está el análisis que los acompaña.",
+      "files": [
+        {
+          "name": "normalizacion-archiveludo.pdf",
+          "url": "assets/evidencias/proyecto/diseno-bd/normalizacion-archiveludo.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 353957,
+          "sizeLabel": "345.7 KB",
+          "title": "Proceso de normalización y desnormalización",
+          "description": "Desde la forma no normalizada hasta la 3FN, con las dependencias encontradas en cada paso y las decisiones de desnormalización.",
+          "cover": "assets/evidencias/proyecto/diseno-bd/_portadas/normalizacion-archiveludo.webp",
+          "downloadName": "Proceso de normalización y desnormalización.pdf"
+        },
+        {
+          "name": "algebra-relacional.pdf",
+          "url": "assets/evidencias/proyecto/diseno-bd/algebra-relacional.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 263947,
+          "sizeLabel": "257.8 KB",
+          "title": "Álgebra relacional",
+          "description": "60 sentencias de álgebra relacional sobre el modelo del proyecto, agrupadas por operador.",
+          "cover": "assets/evidencias/proyecto/diseno-bd/_portadas/algebra-relacional.webp",
+          "downloadName": "Álgebra relacional.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "implementacion",
+      "title": "Implementación",
+      "description": "De elegir el motor y el sistema operativo hasta conectar la aplicación con la base de datos en la nube.",
+      "files": [
+        {
+          "name": "seleccion-rdbms.pdf",
+          "url": "assets/evidencias/proyecto/implementacion/seleccion-rdbms.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 261695,
+          "sizeLabel": "255.6 KB",
+          "title": "Selección del RDBMS",
+          "description": "La comparación de seis motores con una matriz de decisión, y por qué elegimos MySQL en MySQL HeatWave.",
+          "cover": "assets/evidencias/proyecto/implementacion/_portadas/seleccion-rdbms.webp",
+          "downloadName": "Selección del RDBMS.pdf"
+        },
+        {
+          "name": "seleccion-sistema-operativo.pdf",
+          "url": "assets/evidencias/proyecto/implementacion/seleccion-sistema-operativo.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 264198,
+          "sizeLabel": "258.0 KB",
+          "title": "Selección del sistema operativo",
+          "description": "La comparación de distribuciones Linux y Unix con una matriz de decisión, y por qué elegimos Oracle Linux 9.",
+          "cover": "assets/evidencias/proyecto/implementacion/_portadas/seleccion-sistema-operativo.webp",
+          "downloadName": "Selección del sistema operativo.pdf"
+        },
+        {
+          "name": "implementacion-maquina-virtual.pdf",
+          "url": "assets/evidencias/proyecto/implementacion/implementacion-maquina-virtual.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 336749,
+          "sizeLabel": "328.9 KB",
+          "title": "Implementación de la máquina virtual",
+          "description": "Por qué la desplegamos en Oracle Cloud y cómo se armó: red virtual, instancia, acceso por SSH y conexión con MySQL HeatWave.",
+          "cover": "assets/evidencias/proyecto/implementacion/_portadas/implementacion-maquina-virtual.webp",
+          "downloadName": "Implementación de la máquina virtual.pdf"
+        },
+        {
+          "name": "implementacion-rdbms.pdf",
+          "url": "assets/evidencias/proyecto/implementacion/implementacion-rdbms.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 253350,
+          "sizeLabel": "247.4 KB",
+          "title": "Implementación del RDBMS",
+          "description": "El sistema de base de datos en MySQL HeatWave: copias de seguridad, usuarios y privilegios, paso al modelo físico, carga de datos y pruebas.",
+          "cover": "assets/evidencias/proyecto/implementacion/_portadas/implementacion-rdbms.webp",
+          "downloadName": "Implementación del RDBMS.pdf"
+        },
+        {
+          "name": "scripts-implementacion.pdf",
+          "url": "assets/evidencias/proyecto/implementacion/scripts-implementacion.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 415021,
+          "sizeLabel": "405.3 KB",
+          "title": "Scripts de implementación",
+          "description": "Los ocho scripts SQL que pasan el modelo lógico al modelo físico, con su orden de ejecución y los resultados de la validación.",
+          "cover": "assets/evidencias/proyecto/implementacion/_portadas/scripts-implementacion.webp",
+          "downloadName": "Scripts de implementación.pdf"
+        },
+        {
+          "name": "conexion-aplicacion-bd.pdf",
+          "url": "assets/evidencias/proyecto/implementacion/conexion-aplicacion-bd.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 406089,
+          "sizeLabel": "396.6 KB",
+          "title": "Conexión de la aplicación a la base de datos",
+          "description": "Cómo el backend en Spring Boot se conecta a MySQL: configuración, acceso a datos con Spring JDBC, transacciones y manejo de errores.",
+          "cover": "assets/evidencias/proyecto/implementacion/_portadas/conexion-aplicacion-bd.webp",
+          "downloadName": "Conexión de la aplicación a la base de datos.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "aplicacion",
+      "title": "La aplicación",
+      "description": "La aplicación web que usa la base de datos.",
+      "files": [
+        {
+          "name": "diagrama-uml.png",
+          "url": "assets/evidencias/proyecto/aplicacion/diagrama-uml.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 2361937,
+          "sizeLabel": "2.3 MB",
+          "title": "Diagrama de clases (UML)",
+          "description": "Las clases del backend: entidades, DTO, repositorios, servicios y controladores.",
+          "cover": "assets/evidencias/proyecto/aplicacion/_portadas/diagrama-uml.webp",
+          "width": 6400,
+          "height": 4828,
+          "downloadName": "Diagrama de clases (UML).png",
+          "attachments": [
+            {
+              "name": "diagrama-uml-resolucion-completa.png",
+              "url": "assets/evidencias/proyecto/aplicacion/diagrama-uml-resolucion-completa.png",
+              "extension": "png",
+              "sizeLabel": "5.2 MB",
+              "title": "Imagen en resolución completa",
+              "downloadName": "Imagen en resolución completa.png"
+            }
+          ]
+        },
+        {
+          "name": "diagrama-navegacion.png",
+          "url": "assets/evidencias/proyecto/aplicacion/diagrama-navegacion.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 163430,
+          "sizeLabel": "159.6 KB",
+          "title": "Diagrama de navegación",
+          "description": "Las pantallas de la aplicación y cómo se pasa de una a otra según el rol del usuario.",
+          "cover": "assets/evidencias/proyecto/aplicacion/_portadas/diagrama-navegacion.webp",
+          "width": 3660,
+          "height": 2205,
+          "downloadName": "Diagrama de navegación.png"
+        },
+        {
+          "name": "manual-de-usuario.docx",
+          "url": "assets/evidencias/proyecto/aplicacion/manual-de-usuario.docx",
+          "extension": "docx",
+          "kind": "document",
+          "sizeBytes": 24234,
+          "sizeLabel": "23.7 KB",
+          "title": "Manual de usuario",
+          "description": "Cómo usar ArchiveLudo: entrar, recorrer las pantallas y lo que puede hacer cada rol.",
+          "cover": "assets/evidencias/proyecto/aplicacion/_portadas/manual-de-usuario.webp",
+          "preview": "assets/evidencias/proyecto/aplicacion/_vistas/manual-de-usuario.pdf",
+          "downloadName": "Manual de usuario.docx"
+        }
+      ]
+    },
+    {
+      "slug": "cierre",
+      "title": "Cierre",
+      "description": null,
+      "files": [
+        {
+          "name": "acta-de-cierre.docx",
+          "url": "assets/evidencias/proyecto/cierre/acta-de-cierre.docx",
+          "extension": "docx",
+          "kind": "document",
+          "sizeBytes": 26306,
+          "sizeLabel": "25.7 KB",
+          "title": "Acta de cierre del proyecto",
+          "description": "Formaliza el cierre: resume lo que se entregó y revisa cada objetivo contra lo planeado en el acta de constitución.",
+          "cover": "assets/evidencias/proyecto/cierre/_portadas/acta-de-cierre.webp",
+          "preview": "assets/evidencias/proyecto/cierre/_vistas/acta-de-cierre.pdf",
+          "downloadName": "Acta de cierre del proyecto.docx"
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "files": [
+    {
+      "name": "documento-principal-archiveludo.pdf",
+      "url": "assets/evidencias/proyecto/documento-principal/documento-principal-archiveludo.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 2441447,
+      "sizeLabel": "2.3 MB",
+      "title": "ArchiveLudo: Plataforma para la Conservación y Documentación del Patrimonio de Videojuegos",
+      "description": "El documento que reúne todo el proyecto, de principio a fin.",
+      "tag": "Entrega final",
+      "featured": true,
+      "cover": "assets/evidencias/proyecto/documento-principal/_portadas/documento-principal-archiveludo.webp",
+      "downloadName": "ArchiveLudo- Plataforma para la Conservación y Documentación del Patrimonio de Videojuegos.pdf"
+    },
+    {
+      "name": "propuesta-proyecto.pdf",
+      "url": "assets/evidencias/proyecto/planeacion/propuesta-proyecto.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 120869,
+      "sizeLabel": "118.0 KB",
+      "title": "Propuesta de proyecto final",
+      "description": "La propuesta inicial: el problema de la preservación de videojuegos y por qué una base de datos ayuda a resolverlo.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/propuesta-proyecto.webp",
+      "downloadName": "Propuesta de proyecto final.pdf"
+    },
+    {
+      "name": "acta-de-constitucion.docx",
+      "url": "assets/evidencias/proyecto/planeacion/acta-de-constitucion.docx",
+      "extension": "docx",
+      "kind": "document",
+      "sizeBytes": 77308,
+      "sizeLabel": "75.5 KB",
+      "title": "Acta de constitución",
+      "description": "Propósito, alcance, requerimientos, objetivos, riesgos, hitos y equipo con los que se formalizó el proyecto.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/acta-de-constitucion.webp",
+      "preview": "assets/evidencias/proyecto/planeacion/_vistas/acta-de-constitucion.pdf",
+      "downloadName": "Acta de constitución.docx"
+    },
+    {
+      "name": "cronograma.docx",
+      "url": "assets/evidencias/proyecto/planeacion/cronograma.docx",
+      "extension": "docx",
+      "kind": "document",
+      "sizeBytes": 215505,
+      "sizeLabel": "210.5 KB",
+      "title": "Cronograma",
+      "description": "Las actividades y entregables del 20 de septiembre al 6 de noviembre, divididos en fases.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/cronograma.webp",
+      "preview": "assets/evidencias/proyecto/planeacion/_vistas/cronograma.pdf",
+      "downloadName": "Cronograma.docx"
+    },
+    {
+      "name": "edt-general.png",
+      "url": "assets/evidencias/proyecto/planeacion/edt-general.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 111310,
+      "sizeLabel": "108.7 KB",
+      "title": "EDT general",
+      "description": "Estructura de desglose del trabajo de todo el proyecto, por fases.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/edt-general.webp",
+      "width": 1760,
+      "height": 3962,
+      "downloadName": "EDT general.png"
+    },
+    {
+      "name": "edt-backend.png",
+      "url": "assets/evidencias/proyecto/planeacion/edt-backend.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 150697,
+      "sizeLabel": "147.2 KB",
+      "title": "EDT del backend",
+      "description": "El trabajo del backend en Spring Boot dividido en paquetes de trabajo.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/edt-backend.webp",
+      "width": 1712,
+      "height": 4718,
+      "downloadName": "EDT del backend.png"
+    },
+    {
+      "name": "edt-frontend.png",
+      "url": "assets/evidencias/proyecto/planeacion/edt-frontend.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 205417,
+      "sizeLabel": "200.6 KB",
+      "title": "EDT del frontend",
+      "description": "El trabajo del frontend en Angular dividido por pantallas y funciones.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/edt-frontend.webp",
+      "width": 1688,
+      "height": 5920,
+      "downloadName": "EDT del frontend.png"
+    },
+    {
+      "name": "documento-de-supuestos.docx",
+      "url": "assets/evidencias/proyecto/planeacion/documento-de-supuestos.docx",
+      "extension": "docx",
+      "kind": "document",
+      "sizeBytes": 34461,
+      "sizeLabel": "33.7 KB",
+      "title": "Documento de supuestos",
+      "description": "Las reglas del negocio que asumimos para cada entidad. De aquí salieron las restricciones de la base de datos.",
+      "cover": "assets/evidencias/proyecto/planeacion/_portadas/documento-de-supuestos.webp",
+      "preview": "assets/evidencias/proyecto/planeacion/_vistas/documento-de-supuestos.pdf",
+      "downloadName": "Documento de supuestos.docx"
+    },
+    {
+      "name": "normalizacion-archiveludo.pdf",
+      "url": "assets/evidencias/proyecto/diseno-bd/normalizacion-archiveludo.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 353957,
+      "sizeLabel": "345.7 KB",
+      "title": "Proceso de normalización y desnormalización",
+      "description": "Desde la forma no normalizada hasta la 3FN, con las dependencias encontradas en cada paso y las decisiones de desnormalización.",
+      "cover": "assets/evidencias/proyecto/diseno-bd/_portadas/normalizacion-archiveludo.webp",
+      "downloadName": "Proceso de normalización y desnormalización.pdf"
+    },
+    {
+      "name": "algebra-relacional.pdf",
+      "url": "assets/evidencias/proyecto/diseno-bd/algebra-relacional.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 263947,
+      "sizeLabel": "257.8 KB",
+      "title": "Álgebra relacional",
+      "description": "60 sentencias de álgebra relacional sobre el modelo del proyecto, agrupadas por operador.",
+      "cover": "assets/evidencias/proyecto/diseno-bd/_portadas/algebra-relacional.webp",
+      "downloadName": "Álgebra relacional.pdf"
+    },
+    {
+      "name": "seleccion-rdbms.pdf",
+      "url": "assets/evidencias/proyecto/implementacion/seleccion-rdbms.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 261695,
+      "sizeLabel": "255.6 KB",
+      "title": "Selección del RDBMS",
+      "description": "La comparación de seis motores con una matriz de decisión, y por qué elegimos MySQL en MySQL HeatWave.",
+      "cover": "assets/evidencias/proyecto/implementacion/_portadas/seleccion-rdbms.webp",
+      "downloadName": "Selección del RDBMS.pdf"
+    },
+    {
+      "name": "seleccion-sistema-operativo.pdf",
+      "url": "assets/evidencias/proyecto/implementacion/seleccion-sistema-operativo.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 264198,
+      "sizeLabel": "258.0 KB",
+      "title": "Selección del sistema operativo",
+      "description": "La comparación de distribuciones Linux y Unix con una matriz de decisión, y por qué elegimos Oracle Linux 9.",
+      "cover": "assets/evidencias/proyecto/implementacion/_portadas/seleccion-sistema-operativo.webp",
+      "downloadName": "Selección del sistema operativo.pdf"
+    },
+    {
+      "name": "implementacion-maquina-virtual.pdf",
+      "url": "assets/evidencias/proyecto/implementacion/implementacion-maquina-virtual.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 336749,
+      "sizeLabel": "328.9 KB",
+      "title": "Implementación de la máquina virtual",
+      "description": "Por qué la desplegamos en Oracle Cloud y cómo se armó: red virtual, instancia, acceso por SSH y conexión con MySQL HeatWave.",
+      "cover": "assets/evidencias/proyecto/implementacion/_portadas/implementacion-maquina-virtual.webp",
+      "downloadName": "Implementación de la máquina virtual.pdf"
+    },
+    {
+      "name": "implementacion-rdbms.pdf",
+      "url": "assets/evidencias/proyecto/implementacion/implementacion-rdbms.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 253350,
+      "sizeLabel": "247.4 KB",
+      "title": "Implementación del RDBMS",
+      "description": "El sistema de base de datos en MySQL HeatWave: copias de seguridad, usuarios y privilegios, paso al modelo físico, carga de datos y pruebas.",
+      "cover": "assets/evidencias/proyecto/implementacion/_portadas/implementacion-rdbms.webp",
+      "downloadName": "Implementación del RDBMS.pdf"
+    },
+    {
+      "name": "scripts-implementacion.pdf",
+      "url": "assets/evidencias/proyecto/implementacion/scripts-implementacion.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 415021,
+      "sizeLabel": "405.3 KB",
+      "title": "Scripts de implementación",
+      "description": "Los ocho scripts SQL que pasan el modelo lógico al modelo físico, con su orden de ejecución y los resultados de la validación.",
+      "cover": "assets/evidencias/proyecto/implementacion/_portadas/scripts-implementacion.webp",
+      "downloadName": "Scripts de implementación.pdf"
+    },
+    {
+      "name": "conexion-aplicacion-bd.pdf",
+      "url": "assets/evidencias/proyecto/implementacion/conexion-aplicacion-bd.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 406089,
+      "sizeLabel": "396.6 KB",
+      "title": "Conexión de la aplicación a la base de datos",
+      "description": "Cómo el backend en Spring Boot se conecta a MySQL: configuración, acceso a datos con Spring JDBC, transacciones y manejo de errores.",
+      "cover": "assets/evidencias/proyecto/implementacion/_portadas/conexion-aplicacion-bd.webp",
+      "downloadName": "Conexión de la aplicación a la base de datos.pdf"
+    },
+    {
+      "name": "diagrama-uml.png",
+      "url": "assets/evidencias/proyecto/aplicacion/diagrama-uml.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 2361937,
+      "sizeLabel": "2.3 MB",
+      "title": "Diagrama de clases (UML)",
+      "description": "Las clases del backend: entidades, DTO, repositorios, servicios y controladores.",
+      "cover": "assets/evidencias/proyecto/aplicacion/_portadas/diagrama-uml.webp",
+      "width": 6400,
+      "height": 4828,
+      "downloadName": "Diagrama de clases (UML).png",
+      "attachments": [
+        {
+          "name": "diagrama-uml-resolucion-completa.png",
+          "url": "assets/evidencias/proyecto/aplicacion/diagrama-uml-resolucion-completa.png",
+          "extension": "png",
+          "sizeLabel": "5.2 MB",
+          "title": "Imagen en resolución completa",
+          "downloadName": "Imagen en resolución completa.png"
+        }
+      ]
+    },
+    {
+      "name": "diagrama-navegacion.png",
+      "url": "assets/evidencias/proyecto/aplicacion/diagrama-navegacion.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 163430,
+      "sizeLabel": "159.6 KB",
+      "title": "Diagrama de navegación",
+      "description": "Las pantallas de la aplicación y cómo se pasa de una a otra según el rol del usuario.",
+      "cover": "assets/evidencias/proyecto/aplicacion/_portadas/diagrama-navegacion.webp",
+      "width": 3660,
+      "height": 2205,
+      "downloadName": "Diagrama de navegación.png"
+    },
+    {
+      "name": "manual-de-usuario.docx",
+      "url": "assets/evidencias/proyecto/aplicacion/manual-de-usuario.docx",
+      "extension": "docx",
+      "kind": "document",
+      "sizeBytes": 24234,
+      "sizeLabel": "23.7 KB",
+      "title": "Manual de usuario",
+      "description": "Cómo usar ArchiveLudo: entrar, recorrer las pantallas y lo que puede hacer cada rol.",
+      "cover": "assets/evidencias/proyecto/aplicacion/_portadas/manual-de-usuario.webp",
+      "preview": "assets/evidencias/proyecto/aplicacion/_vistas/manual-de-usuario.pdf",
+      "downloadName": "Manual de usuario.docx"
+    },
+    {
+      "name": "acta-de-cierre.docx",
+      "url": "assets/evidencias/proyecto/cierre/acta-de-cierre.docx",
+      "extension": "docx",
+      "kind": "document",
+      "sizeBytes": 26306,
+      "sizeLabel": "25.7 KB",
+      "title": "Acta de cierre del proyecto",
+      "description": "Formaliza el cierre: resume lo que se entregó y revisa cada objetivo contra lo planeado en el acta de constitución.",
+      "cover": "assets/evidencias/proyecto/cierre/_portadas/acta-de-cierre.webp",
+      "preview": "assets/evidencias/proyecto/cierre/_vistas/acta-de-cierre.pdf",
+      "downloadName": "Acta de cierre del proyecto.docx"
+    }
+  ]
 }

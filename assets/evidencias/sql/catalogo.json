@@ -1,0 +1,61 @@
+{
+  "introduccion": "Estos son los scripts que escribí y ejecuté en MySQL. Los del proyecto crean y prueban la base de datos real de ArchiveLudo; los de repaso son mis apuntes de práctica con una base pequeña de videojuegos, organizados por tema del álgebra relacional. Elige un script a la izquierda para leerlo completo.",
+  "grupos": [
+    {
+      "carpeta": "proyecto-archiveludo",
+      "titulo": "Proyecto ArchiveLudo",
+      "descripcion": "Implementación de la base de datos del proyecto final, en el orden en que se ejecutan.",
+      "archivos": {
+        "00-eliminarobjetosProyecto.sql": {
+          "titulo": "Eliminar objetos",
+          "descripcion": "Borra las vistas y todas las tablas para reinstalar desde cero. Las tablas se borran al revés del orden de creación por las llaves foráneas."
+        },
+        "01-creacionobjetosProyecto.sql": {
+          "titulo": "Creación de la base de datos y sus 17 tablas",
+          "descripcion": "Primero se crean las tablas que no dependen de otras y después las que tienen llaves foráneas."
+        },
+        "02-insercionregistrosProyecto.sql": {
+          "titulo": "Datos de demostración",
+          "descripcion": "168 registros. Los juegos, estudios y editoras son reales; las instituciones, expertos, copias y proyectos son inventados pero coherentes."
+        },
+        "03-usuariospermisosProyecto.sql": {
+          "titulo": "Usuarios y permisos de MySQL",
+          "descripcion": "Un usuario para la aplicación (lee y escribe datos) y otro solo de consulta."
+        },
+        "04-restriccionesadicionalesProyecto.sql": {
+          "titulo": "Restricciones adicionales",
+          "descripcion": "2 UNIQUE y 11 CHECK sacados del documento de supuestos."
+        },
+        "05-vistasProyecto.sql": {
+          "titulo": "Vistas",
+          "descripcion": "Consultas guardadas: estatus legal vigente, custodia actual de cada copia, títulos sin copias y más."
+        },
+        "06-verificacionProyecto.sql": {
+          "titulo": "Verificación",
+          "descripcion": "Solo lectura: revisa la versión, las 17 tablas, los registros por tabla y que no haya datos huérfanos."
+        },
+        "07-pruebasrestriccionesProyecto.sql": {
+          "titulo": "Pruebas de restricciones",
+          "descripcion": "Cada sentencia rompe una restricción a propósito y tiene que fallar. Al final hay ROLLBACK, así que no queda nada guardado."
+        }
+      }
+    },
+    {
+      "carpeta": "repaso-videojuegos",
+      "titulo": "Repaso · Práctica con videojuegos",
+      "descripcion": "Apuntes de estudio: cada script trabaja un operador del álgebra relacional y su equivalente en SQL, con el número de filas que debe devolver cada consulta."
+    }
+  ],
+  "relacionados": [
+    {
+      "ruta": "proyecto/implementacion/scripts-implementacion.pdf",
+      "titulo": "Documento de scripts de implementación",
+      "descripcion": "Explica paso a paso cómo se pasó del modelo lógico al modelo físico con estos scripts."
+    },
+    {
+      "ruta": "proyecto/diseno-bd/algebra-relacional.pdf",
+      "titulo": "Álgebra relacional del proyecto",
+      "descripcion": "Las consultas del proyecto escritas primero en álgebra relacional."
+    }
+  ]
+}

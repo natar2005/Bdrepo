@@ -1,5 +1,199 @@
 {
   "category": "investigacion",
-  "generatedAt": "2026-08-09T03:33:51.088Z",
-  "files": []
+  "generatedAt": "2026-11-25T05:08:05.275Z",
+  "intro": "Estas son las investigaciones que hice para entender mejor los temas del curso y lo que necesitábamos para el proyecto. Cada una tiene su resumen, el desarrollo del tema y las referencias que consulté.",
+  "groups": [
+    {
+      "slug": "general",
+      "title": null,
+      "description": null,
+      "files": [
+        {
+          "name": "modelo-entidad-relacion.pdf",
+          "url": "assets/evidencias/investigacion/modelo-entidad-relacion.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 211710,
+          "sizeLabel": "206.7 KB",
+          "title": "Modelo entidad-relación y diseño de bases de datos",
+          "description": "El modelo de Chen como herramienta de diseño conceptual, sus elementos y las reglas para pasarlo a tablas, aplicado a un catálogo de videojuegos.",
+          "tag": "Diseño",
+          "cover": "assets/evidencias/investigacion/_portadas/modelo-entidad-relacion.webp",
+          "downloadName": "Modelo entidad-relación y diseño de bases de datos.pdf"
+        },
+        {
+          "name": "modelo-relacional-normalizacion.pdf",
+          "url": "assets/evidencias/investigacion/modelo-relacional-normalizacion.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 202093,
+          "sizeLabel": "197.4 KB",
+          "title": "El modelo relacional y la normalización",
+          "description": "El modelo de Codd, las llaves y las dependencias funcionales, y las formas normales 1FN, 2FN, 3FN y Boyce-Codd con un ejemplo.",
+          "tag": "Diseño",
+          "cover": "assets/evidencias/investigacion/_portadas/modelo-relacional-normalizacion.webp",
+          "downloadName": "El modelo relacional y la normalización.pdf"
+        },
+        {
+          "name": "sql-integridad-transacciones.pdf",
+          "url": "assets/evidencias/investigacion/sql-integridad-transacciones.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 228757,
+          "sizeLabel": "223.4 KB",
+          "title": "SQL, integridad y transacciones ACID",
+          "description": "El estándar SQL, las restricciones de integridad (incluido CHECK en MySQL), las propiedades ACID y cómo evitar la inyección SQL.",
+          "tag": "SQL",
+          "cover": "assets/evidencias/investigacion/_portadas/sql-integridad-transacciones.webp",
+          "downloadName": "SQL, integridad y transacciones ACID.pdf"
+        },
+        {
+          "name": "arquitectura-web-ciclo-de-vida.pdf",
+          "url": "assets/evidencias/investigacion/arquitectura-web-ciclo-de-vida.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 224961,
+          "sizeLabel": "219.7 KB",
+          "title": "Arquitectura web y ciclo de vida del desarrollo",
+          "description": "Cómo una aplicación consume la base de datos: REST, Spring Boot con JDBC, Angular, modelos de ciclo de vida y Git.",
+          "tag": "Aplicación",
+          "cover": "assets/evidencias/investigacion/_portadas/arquitectura-web-ciclo-de-vida.webp",
+          "downloadName": "Arquitectura web y ciclo de vida del desarrollo.pdf"
+        },
+        {
+          "name": "seguridad-contrasenas-jwt.pdf",
+          "url": "assets/evidencias/investigacion/seguridad-contrasenas-jwt.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 220786,
+          "sizeLabel": "215.6 KB",
+          "title": "Seguridad: roles, contraseñas y JWT",
+          "description": "Principios de diseño seguro, control de acceso por roles, contraseñas guardadas con bcrypt y autenticación con JSON Web Tokens.",
+          "tag": "Seguridad",
+          "cover": "assets/evidencias/investigacion/_portadas/seguridad-contrasenas-jwt.webp",
+          "downloadName": "Seguridad- roles, contraseñas y JWT.pdf"
+        },
+        {
+          "name": "oci-nube-mysql-heatwave.pdf",
+          "url": "assets/evidencias/investigacion/oci-nube-mysql-heatwave.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 197514,
+          "sizeLabel": "192.9 KB",
+          "title": "La nube, OCI y MySQL HeatWave",
+          "description": "Qué es la computación en la nube según el NIST, los componentes de Oracle Cloud Infrastructure y el servicio administrado de MySQL.",
+          "tag": "Nube",
+          "cover": "assets/evidencias/investigacion/_portadas/oci-nube-mysql-heatwave.webp",
+          "downloadName": "La nube, OCI y MySQL HeatWave.pdf"
+        },
+        {
+          "name": "preservacion-videojuegos.pdf",
+          "url": "assets/evidencias/investigacion/preservacion-videojuegos.pdf",
+          "extension": "pdf",
+          "kind": "pdf",
+          "sizeBytes": 185372,
+          "sizeLabel": "181.0 KB",
+          "title": "Preservación de videojuegos y metadatos",
+          "description": "El problema de preservar los videojuegos, las estrategias y los esquemas de metadatos que existen. Es el contexto de nuestro proyecto.",
+          "tag": "Contexto",
+          "cover": "assets/evidencias/investigacion/_portadas/preservacion-videojuegos.webp",
+          "downloadName": "Preservación de videojuegos y metadatos.pdf"
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "files": [
+    {
+      "name": "modelo-entidad-relacion.pdf",
+      "url": "assets/evidencias/investigacion/modelo-entidad-relacion.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 211710,
+      "sizeLabel": "206.7 KB",
+      "title": "Modelo entidad-relación y diseño de bases de datos",
+      "description": "El modelo de Chen como herramienta de diseño conceptual, sus elementos y las reglas para pasarlo a tablas, aplicado a un catálogo de videojuegos.",
+      "tag": "Diseño",
+      "cover": "assets/evidencias/investigacion/_portadas/modelo-entidad-relacion.webp",
+      "downloadName": "Modelo entidad-relación y diseño de bases de datos.pdf"
+    },
+    {
+      "name": "modelo-relacional-normalizacion.pdf",
+      "url": "assets/evidencias/investigacion/modelo-relacional-normalizacion.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 202093,
+      "sizeLabel": "197.4 KB",
+      "title": "El modelo relacional y la normalización",
+      "description": "El modelo de Codd, las llaves y las dependencias funcionales, y las formas normales 1FN, 2FN, 3FN y Boyce-Codd con un ejemplo.",
+      "tag": "Diseño",
+      "cover": "assets/evidencias/investigacion/_portadas/modelo-relacional-normalizacion.webp",
+      "downloadName": "El modelo relacional y la normalización.pdf"
+    },
+    {
+      "name": "sql-integridad-transacciones.pdf",
+      "url": "assets/evidencias/investigacion/sql-integridad-transacciones.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 228757,
+      "sizeLabel": "223.4 KB",
+      "title": "SQL, integridad y transacciones ACID",
+      "description": "El estándar SQL, las restricciones de integridad (incluido CHECK en MySQL), las propiedades ACID y cómo evitar la inyección SQL.",
+      "tag": "SQL",
+      "cover": "assets/evidencias/investigacion/_portadas/sql-integridad-transacciones.webp",
+      "downloadName": "SQL, integridad y transacciones ACID.pdf"
+    },
+    {
+      "name": "arquitectura-web-ciclo-de-vida.pdf",
+      "url": "assets/evidencias/investigacion/arquitectura-web-ciclo-de-vida.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 224961,
+      "sizeLabel": "219.7 KB",
+      "title": "Arquitectura web y ciclo de vida del desarrollo",
+      "description": "Cómo una aplicación consume la base de datos: REST, Spring Boot con JDBC, Angular, modelos de ciclo de vida y Git.",
+      "tag": "Aplicación",
+      "cover": "assets/evidencias/investigacion/_portadas/arquitectura-web-ciclo-de-vida.webp",
+      "downloadName": "Arquitectura web y ciclo de vida del desarrollo.pdf"
+    },
+    {
+      "name": "seguridad-contrasenas-jwt.pdf",
+      "url": "assets/evidencias/investigacion/seguridad-contrasenas-jwt.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 220786,
+      "sizeLabel": "215.6 KB",
+      "title": "Seguridad: roles, contraseñas y JWT",
+      "description": "Principios de diseño seguro, control de acceso por roles, contraseñas guardadas con bcrypt y autenticación con JSON Web Tokens.",
+      "tag": "Seguridad",
+      "cover": "assets/evidencias/investigacion/_portadas/seguridad-contrasenas-jwt.webp",
+      "downloadName": "Seguridad- roles, contraseñas y JWT.pdf"
+    },
+    {
+      "name": "oci-nube-mysql-heatwave.pdf",
+      "url": "assets/evidencias/investigacion/oci-nube-mysql-heatwave.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 197514,
+      "sizeLabel": "192.9 KB",
+      "title": "La nube, OCI y MySQL HeatWave",
+      "description": "Qué es la computación en la nube según el NIST, los componentes de Oracle Cloud Infrastructure y el servicio administrado de MySQL.",
+      "tag": "Nube",
+      "cover": "assets/evidencias/investigacion/_portadas/oci-nube-mysql-heatwave.webp",
+      "downloadName": "La nube, OCI y MySQL HeatWave.pdf"
+    },
+    {
+      "name": "preservacion-videojuegos.pdf",
+      "url": "assets/evidencias/investigacion/preservacion-videojuegos.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 185372,
+      "sizeLabel": "181.0 KB",
+      "title": "Preservación de videojuegos y metadatos",
+      "description": "El problema de preservar los videojuegos, las estrategias y los esquemas de metadatos que existen. Es el contexto de nuestro proyecto.",
+      "tag": "Contexto",
+      "cover": "assets/evidencias/investigacion/_portadas/preservacion-videojuegos.webp",
+      "downloadName": "Preservación de videojuegos y metadatos.pdf"
+    }
+  ]
 }
