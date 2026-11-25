@@ -1,0 +1,150 @@
+<article class="book">
+  <header class="book__head">
+    <span class="book__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2" /><path d="M3.5 9h17M3.5 14.5h17M9 3.5v17" /></svg>
+    </span>
+    <div class="book__info">
+      <h3 class="book__title">{{ file.title }}</h3>
+      @if (file.description) {
+        <p class="book__desc">{{ file.description }}</p>
+      }
+    </div>
+    <a class="book__download" [href]="file.url" [attr.download]="file.downloadName">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11" /><path d="M7 10l5 5 5-5" /><path d="M5 20h14" /></svg>
+      Excel · {{ file.sizeLabel }}
+    </a>
+  </header>
+
+  @switch (status()) {
+    @case ('loading') {
+      <p class="book__state">Cargando las hojas…</p>
+    }
+    @case ('error') {
+      <p class="book__state book__state--error">No se pudo abrir el libro aquí. Puedes descargarlo con el botón de arriba.</p>
+    }
+    @default {
+      <div class="toolbar">
+        <div class="tabs" role="tablist" aria-label="Hojas del libro">
+          @for (s of workbook()!.sheets; track s.name; let i = $index) {
+            <button
+              type="button"
+              role="tab"
+              class="tab"
+              [class.tab--active]="activeIndex() === i"
+              [attr.aria-selected]="activeIndex() === i"
+              (click)="selectSheet(i)"
+            >
+              {{ s.title }}
+            </button>
+          }
+        </div>
+
+        @if (hasGuided()) {
+          <div class="switch" role="group" aria-label="Forma de ver la hoja">
+            <button type="button" class="switch__opt" [class.switch__opt--on]="effectiveMode() === 'guided'" (click)="setMode('guided')">Paso a paso</button>
+            <button type="button" class="switch__opt" [class.switch__opt--on]="effectiveMode() === 'grid'" (click)="setMode('grid')">Hoja de Excel</button>
+          </div>
+        }
+      </div>
+
+      @if (effectiveMode() === 'guided') {
+        <div class="guided">
+          <p class="legend">
+            <span class="attr attr--key">Llave primaria</span>
+            <span class="attr attr--fk">Llave foránea</span>
+            <span class="attr attr--gone">Atributo que sale</span>
+            <span class="badge">Tabla nueva</span>
+          </p>
+
+          @for (section of sections(); track $index) {
+            <section class="g-section">
+              @if (section.title) {
+                <h4 class="g-section__title">{{ section.title }}</h4>
+              }
+              @for (step of section.steps; track $index) {
+                <div class="g-step" [class.g-step--labeled]="!!step.label">
+                  @if (step.label) {
+                    <span class="g-step__label">{{ stepLabel(step.label) }}</span>
+                  }
+                  <div class="g-step__tables">
+                    @for (table of step.tables; track table.name) {
+                      <div class="g-table" [class.g-table--new]="table.isNew && !!step.label">
+                        <p class="g-table__name">
+                          {{ table.name }}
+                          @if (table.isNew && step.label) {
+                            <span class="badge">Nueva</span>
+                          }
+                          @if (table.renamedFrom) {
+                            <span class="g-table__from">antes {{ table.renamedFrom }}</span>
+                          }
+                        </p>
+                        <div class="g-table__cols">
+                          @for (col of table.columns; track col.name) {
+                            <span [class]="columnClass(col)">{{ col.name }}</span>
+                          }
+                          @for (gone of table.removed; track gone) {
+                            <span class="attr attr--gone" title="Sale de esta tabla en este paso">{{ gone }}</span>
+                          }
+                        </div>
+                      </div>
+                    }
+                  </div>
+
+                  @if (step.details.length) {
+                    <dl class="g-details">
+                      @for (d of step.details; track d.title; let first = $first) {
+                        <div class="g-detail" [class.g-detail--wide]="first">
+                          <dt>{{ d.title }}</dt>
+                          <dd>{{ d.text }}</dd>
+                        </div>
+                      }
+                    </dl>
+                  }
+                </div>
+              }
+            </section>
+          }
+        </div>
+      } @else {
+        <div class="sheet">
+          <div class="sheet__bar">
+            <span>{{ sheet()?.name }}</span>
+            <div class="sheet__zoom">
+              <button type="button" (click)="zoomOut()" aria-label="Alejar">−</button>
+              <span>{{ zoom() * 100 | number: '1.0-0' }} %</span>
+              <button type="button" (click)="zoomIn()" aria-label="Acercar">+</button>
+            </div>
+          </div>
+          <div class="sheet__scroll">
+            <table class="xl" [style.zoom]="zoom()">
+              <colgroup>
+                <col class="xl__corner-col">
+                @for (w of sheet()!.colWidths; track $index) {
+                  <col [style.width.px]="w">
+                }
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="xl__corner"></th>
+                  @for (letter of columnLetters(); track letter) {
+                    <th class="xl__colhead">{{ letter }}</th>
+                  }
+                </tr>
+              </thead>
+              <tbody>
+                @for (row of grid(); track row.n) {
+                  <tr [style.height.px]="row.height">
+                    <th class="xl__rowhead">{{ row.n }}</th>
+                    @for (cell of row.cells; track cell.key) {
+                      <td [attr.rowspan]="cell.rowspan > 1 ? cell.rowspan : null" [attr.colspan]="cell.colspan > 1 ? cell.colspan : null" [ngStyle]="cell.style">{{ cell.text }}</td>
+                    }
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      }
+    }
+  }
+</article>

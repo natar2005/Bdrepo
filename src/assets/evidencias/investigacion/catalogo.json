@@ -1,0 +1,45 @@
+{
+  "introduccion": "Estas son las investigaciones que hice para entender mejor los temas del curso y lo que necesitábamos para el proyecto. Cada una tiene su resumen, el desarrollo del tema y las referencias que consulté.",
+  "grupos": [
+    {
+      "carpeta": "",
+      "archivos": {
+        "modelo-entidad-relacion.pdf": {
+          "titulo": "Modelo entidad-relación y diseño de bases de datos",
+          "descripcion": "El modelo de Chen como herramienta de diseño conceptual, sus elementos y las reglas para pasarlo a tablas, aplicado a un catálogo de videojuegos.",
+          "etiqueta": "Diseño"
+        },
+        "modelo-relacional-normalizacion.pdf": {
+          "titulo": "El modelo relacional y la normalización",
+          "descripcion": "El modelo de Codd, las llaves y las dependencias funcionales, y las formas normales 1FN, 2FN, 3FN y Boyce-Codd con un ejemplo.",
+          "etiqueta": "Diseño"
+        },
+        "sql-integridad-transacciones.pdf": {
+          "titulo": "SQL, integridad y transacciones ACID",
+          "descripcion": "El estándar SQL, las restricciones de integridad (incluido CHECK en MySQL), las propiedades ACID y cómo evitar la inyección SQL.",
+          "etiqueta": "SQL"
+        },
+        "arquitectura-web-ciclo-de-vida.pdf": {
+          "titulo": "Arquitectura web y ciclo de vida del desarrollo",
+          "descripcion": "Cómo una aplicación consume la base de datos: REST, Spring Boot con JDBC, Angular, modelos de ciclo de vida y Git.",
+          "etiqueta": "Aplicación"
+        },
+        "seguridad-contrasenas-jwt.pdf": {
+          "titulo": "Seguridad: roles, contraseñas y JWT",
+          "descripcion": "Principios de diseño seguro, control de acceso por roles, contraseñas guardadas con bcrypt y autenticación con JSON Web Tokens.",
+          "etiqueta": "Seguridad"
+        },
+        "oci-nube-mysql-heatwave.pdf": {
+          "titulo": "La nube, OCI y MySQL HeatWave",
+          "descripcion": "Qué es la computación en la nube según el NIST, los componentes de Oracle Cloud Infrastructure y el servicio administrado de MySQL.",
+          "etiqueta": "Nube"
+        },
+        "preservacion-videojuegos.pdf": {
+          "titulo": "Preservación de videojuegos y metadatos",
+          "descripcion": "El problema de preservar los videojuegos, las estrategias y los esquemas de metadatos que existen. Es el contexto de nuestro proyecto.",
+          "etiqueta": "Contexto"
+        }
+      }
+    }
+  ]
+}

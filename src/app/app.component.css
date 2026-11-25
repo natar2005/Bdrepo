@@ -9,6 +9,12 @@
   gap: var(--space-xl);
 }
 
+.page--wide {
+  max-width: 1240px;
+  padding-left: clamp(16px, 4vw, 40px);
+  padding-right: clamp(16px, 4vw, 40px);
+}
+
 .footer {
   text-align: center;
   padding-top: var(--space-md);

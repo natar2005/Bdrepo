@@ -1,5 +1,76 @@
 {
   "category": "normalizacion",
-  "generatedAt": "2026-08-09T03:33:51.093Z",
-  "files": []
+  "generatedAt": "2026-11-25T04:48:44.467Z",
+  "intro": "Para practicar la normalización trabajé dos casos en Excel. En cada uno parto de la tabla en primera y segunda forma normal y la llevo, paso a paso, hasta tercera forma normal. En cada paso explico qué dependencia se corrige, qué pasaría en el negocio si no se corrigiera y cómo queda el esquema.",
+  "groups": [
+    {
+      "slug": "taller",
+      "title": null,
+      "description": null,
+      "files": [
+        {
+          "name": "taller-normalizacion.xlsx",
+          "url": "assets/evidencias/normalizacion/taller/taller-normalizacion.xlsx",
+          "extension": "xlsx",
+          "kind": "sheet",
+          "sizeBytes": 17455,
+          "sizeLabel": "17.0 KB",
+          "title": "Taller de normalización",
+          "description": "Dos casos: las citas de una clínica y las ventas de una cadena de sucursales.",
+          "sheet": "assets/evidencias/normalizacion/taller/_vistas/taller-normalizacion.json",
+          "sheetNames": [
+            "Caso 1 · Citas de una clínica",
+            "Caso 2 · Ventas por sucursal"
+          ],
+          "downloadName": "Taller de normalización.xlsx"
+        }
+      ]
+    }
+  ],
+  "related": [
+    {
+      "name": "normalizacion-archiveludo.pdf",
+      "url": "assets/evidencias/proyecto/diseno-bd/normalizacion-archiveludo.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 353957,
+      "sizeLabel": "345.7 KB",
+      "title": "Normalización del proyecto ArchiveLudo",
+      "description": "La misma técnica aplicada a las tablas reales del proyecto final, con el antes y el después.",
+      "cover": "assets/evidencias/proyecto/diseno-bd/_portadas/normalizacion-archiveludo.webp",
+      "downloadName": "Normalización del proyecto ArchiveLudo.pdf",
+      "category": "proyecto"
+    },
+    {
+      "name": "modelo-relacional-normalizacion.pdf",
+      "url": "assets/evidencias/investigacion/modelo-relacional-normalizacion.pdf",
+      "extension": "pdf",
+      "kind": "pdf",
+      "sizeBytes": 202093,
+      "sizeLabel": "197.4 KB",
+      "title": "El modelo relacional y la normalización",
+      "description": "Mi investigación sobre las formas normales, de la 1FN a Boyce-Codd.",
+      "cover": "assets/evidencias/investigacion/_portadas/modelo-relacional-normalizacion.webp",
+      "downloadName": "El modelo relacional y la normalización.pdf",
+      "category": "investigacion"
+    }
+  ],
+  "files": [
+    {
+      "name": "taller-normalizacion.xlsx",
+      "url": "assets/evidencias/normalizacion/taller/taller-normalizacion.xlsx",
+      "extension": "xlsx",
+      "kind": "sheet",
+      "sizeBytes": 17455,
+      "sizeLabel": "17.0 KB",
+      "title": "Taller de normalización",
+      "description": "Dos casos: las citas de una clínica y las ventas de una cadena de sucursales.",
+      "sheet": "assets/evidencias/normalizacion/taller/_vistas/taller-normalizacion.json",
+      "sheetNames": [
+        "Caso 1 · Citas de una clínica",
+        "Caso 2 · Ventas por sucursal"
+      ],
+      "downloadName": "Taller de normalización.xlsx"
+    }
+  ]
 }

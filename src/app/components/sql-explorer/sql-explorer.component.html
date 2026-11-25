@@ -1,0 +1,87 @@
+<div class="ide">
+  <aside class="ide__side" aria-label="Scripts">
+    @for (group of scriptGroups(); track group.slug) {
+      <div class="side-group">
+        <p class="side-group__title">{{ group.title }}</p>
+        <ul class="side-group__list">
+          @for (file of group.files; track file.url) {
+            <li>
+              <button
+                type="button"
+                class="script"
+                [class.script--active]="selected() === file"
+                [attr.aria-current]="selected() === file ? 'true' : null"
+                (click)="select(file)"
+              >
+                <span class="script__num">{{ file.number ?? '··' }}</span>
+                <span class="script__text">
+                  <span class="script__title">{{ file.title }}</span>
+                  <span class="script__meta">{{ file.lines }} líneas</span>
+                </span>
+              </button>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </aside>
+
+  <section class="ide__main">
+    @if (selected(); as file) {
+      <div class="ide__bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="ide__file">{{ file.name }}</span>
+        <div class="ide__actions">
+          <button type="button" class="tool" (click)="copy()" [disabled]="status() !== 'ready'">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" /><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" /></svg>
+            {{ copied() ? 'Copiado' : 'Copiar' }}
+          </button>
+          <a class="tool" [href]="file.url" [attr.download]="file.downloadName">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11" /><path d="M7 10l5 5 5-5" /><path d="M5 20h14" /></svg>
+            Descargar
+          </a>
+        </div>
+      </div>
+
+      <div class="ide__intro">
+        <p class="ide__eyebrow">
+          {{ selectedGroup()?.title }}
+          @if (file.number) {
+            · Script {{ file.number }}
+          }
+        </p>
+        <h3 class="ide__title">{{ file.title }}</h3>
+        @for (line of descriptionLines(file); track $index) {
+          <p class="ide__desc">{{ line }}</p>
+        }
+
+        @if (outline().length > 1) {
+          <details class="outline">
+            <summary>Ir a una consulta <span class="outline__count">{{ outline().length }}</span></summary>
+            <div class="outline__list">
+              @for (entry of outline(); track entry.line) {
+                <button type="button" class="outline__item" (click)="jumpTo(entry.line)">
+                  <span class="outline__line">{{ entry.line }}</span>{{ entry.label }}
+                </button>
+              }
+            </div>
+          </details>
+        }
+      </div>
+
+      <div class="code" #code tabindex="0" [attr.aria-label]="'Código de ' + file.name">
+        @switch (status()) {
+          @case ('loading') {
+            <p class="code__state">Cargando script…</p>
+          }
+          @case ('error') {
+            <p class="code__state code__state--error">No se pudo cargar el script. Puedes descargarlo con el botón de arriba.</p>
+          }
+          @default {
+            <pre class="code__pre"><code>@for (line of lines(); track $index) {<span class="line" [attr.data-line]="$index + 1" [class.line--flash]="flashLine() === $index + 1"><span class="line__n" aria-hidden="true">{{ $index + 1 }}</span><span class="line__c" [innerHTML]="line.html || ' '"></span></span>}</code></pre>
+          }
+        }
+      </div>
+    }
+  </section>
+</div>
