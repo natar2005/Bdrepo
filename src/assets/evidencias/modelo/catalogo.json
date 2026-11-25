@@ -1,0 +1,94 @@
+{
+  "introduccion": "Aquí está el recorrido de los modelos que trabajé en el semestre: desde los primeros apuntes, pasando por el taller de la aerolínea, hasta el modelo completo del proyecto final ArchiveLudo. Puedes abrir cualquier diagrama, acercarte y moverte por él para ver los detalles.",
+  "grupos": [
+    {
+      "carpeta": "apuntes",
+      "titulo": "Primeros apuntes",
+      "descripcion": "Así empezó todo: identificar entidades y sus atributos a mano, antes de pasar a los diagramas.",
+      "archivos": {
+        "primer-modelo-artista-cancion-album.jpeg": {
+          "titulo": "Artista, canción y álbum",
+          "descripcion": "Uno de los primeros ejercicios de clase: reconocer las entidades de una aplicación de música y listar sus atributos.",
+          "etiqueta": "A mano"
+        }
+      }
+    },
+    {
+      "carpeta": "taller-aerolinea",
+      "titulo": "Taller 1 · Aerolínea",
+      "descripcion": "El primer caso completo del curso: vuelos, rutas, aviones, tripulantes, pasajeros e insumos. Lo llevé del modelo entidad-relación hasta el modelo relacional.",
+      "archivos": {
+        "01-mer-chen-aerolinea.png": {
+          "titulo": "Modelo entidad-relación (Peter Chen)",
+          "descripcion": "Entidades, atributos y relaciones del caso, con la agregación ASIGNACIÓN y la jerarquía de tripulantes (pilotos y auxiliares).",
+          "etiqueta": "draw.io"
+        },
+        "02-reduccion-a-tablas-aerolinea.png": {
+          "titulo": "Reducción a tablas",
+          "descripcion": "El mismo modelo después de aplicar las reglas de reducción: aparecen tablas como PAS_VUELO, VUE_TRI y PRO_INS_VUE.",
+          "etiqueta": "draw.io"
+        },
+        "03-modelo-logico-aerolinea.png": {
+          "titulo": "Modelo lógico (Crow's Foot)",
+          "descripcion": "Las tablas resultantes en Oracle SQL Data Modeler, con sus identificadores y la cardinalidad de cada relación en notación pata de gallo.",
+          "etiqueta": "Data Modeler",
+          "adjuntos": ["taller-1-data-modeler.zip"]
+        },
+        "04-modelo-relacional-aerolinea.png": {
+          "titulo": "Modelo relacional",
+          "descripcion": "Tablas con sus llaves primarias (P), foráneas (F) y columnas obligatorias (*), generadas desde el modelo lógico.",
+          "etiqueta": "Data Modeler",
+          "adjuntos": ["taller-1-data-modeler.zip"]
+        },
+        "taller-1-data-modeler.zip": {
+          "titulo": "Proyecto de Data Modeler"
+        }
+      }
+    },
+    {
+      "carpeta": "archiveludo",
+      "titulo": "Proyecto final · ArchiveLudo",
+      "descripcion": "Una plataforma para preservar y documentar videojuegos. Estos son todos los modelos del proyecto, en el orden en que los fuimos construyendo.",
+      "archivos": {
+        "01-mer-chen-archiveludo.png": {
+          "titulo": "Modelo entidad-relación (Peter Chen)",
+          "descripcion": "Videojuegos, copias, custodias, instituciones, estatus legal, eventos de riesgo, proyectos de restauración y expertos, con la participación y cardinalidad de cada relación.",
+          "etiqueta": "draw.io"
+        },
+        "02-mer-extendido-archiveludo.png": {
+          "titulo": "Modelo entidad-relación extendido",
+          "descripcion": "Agrega la especialización de COPIA en copia física y copia digital, cada una con sus propios atributos.",
+          "etiqueta": "draw.io"
+        },
+        "03-mer-crowsfoot-archiveludo.png": {
+          "titulo": "MER en Crow's Foot",
+          "descripcion": "El modelo entidad-relación pasado a Oracle SQL Data Modeler con notación pata de gallo.",
+          "etiqueta": "Data Modeler",
+          "adjuntos": ["mer-crowsfoot-data-modeler.zip"]
+        },
+        "04-mer-e-crowsfoot-archiveludo.png": {
+          "titulo": "MER extendido en Crow's Foot",
+          "descripcion": "La jerarquía de COPIA queda dentro del supertipo, como la dibuja Data Modeler.",
+          "etiqueta": "Data Modeler",
+          "adjuntos": ["mer-e-crowsfoot-data-modeler.zip"]
+        },
+        "05-modelo-relacional-archiveludo.png": {
+          "titulo": "Modelo relacional",
+          "descripcion": "Las 17 tablas finales con sus llaves primarias, foráneas y únicas. Es el modelo que después implementamos en MySQL.",
+          "etiqueta": "Data Modeler",
+          "adjuntos": ["modelo-relacional-data-modeler.zip"]
+        },
+        "mer-crowsfoot-data-modeler.zip": { "titulo": "Proyecto de Data Modeler" },
+        "mer-e-crowsfoot-data-modeler.zip": { "titulo": "Proyecto de Data Modeler" },
+        "modelo-relacional-data-modeler.zip": { "titulo": "Proyecto de Data Modeler" }
+      }
+    }
+  ],
+  "relacionados": [
+    {
+      "ruta": "proyecto/aplicacion/diagrama-uml.png",
+      "titulo": "Diagrama de clases de la aplicación",
+      "descripcion": "Cómo se ven las tablas del modelo dentro del código del backend."
+    }
+  ]
+}

@@ -1,13 +1,29 @@
 <article class="category" appReveal>
-  <button type="button" class="category__back" (click)="goToEvidencias()">
-    <span aria-hidden="true">←</span> Volver a evidencias
-  </button>
+  <header class="category__head">
+    <button type="button" class="category__back" (click)="goToEvidencias()">
+      <span aria-hidden="true">←</span> Volver a evidencias
+    </button>
 
-  <h1 class="category__title" [style.color]="category.accentColor">
-    {{ category.title }}<span class="category__dot">.</span>
-  </h1>
+    <h1 class="category__title" [style.color]="category.accentColor">
+      {{ category.title }}<span class="category__dot">.</span>
+    </h1>
 
-  <p class="category__description">{{ category.description }}</p>
+    <p class="category__description">{{ category.description }}</p>
+
+    @if (manifest()?.intro; as intro) {
+      <p class="category__intro">{{ intro }}</p>
+    }
+
+    @if (status() === 'ready' && showJumpNav()) {
+      <nav class="jump" aria-label="Grupos de esta sección">
+        @for (section of sections(); track section.group.slug) {
+          @if (section.group.title) {
+            <button type="button" class="jump__chip" (click)="scrollToGroup(section.group.slug)">{{ section.group.title }}</button>
+          }
+        }
+      </nav>
+    }
+  </header>
 
   @switch (status()) {
     @case ('loading') {
@@ -20,25 +36,61 @@
     }
     @case ('empty') {
       <div class="category__empty">
-        <p class="category__state">Aún no hay archivos aquí. </p>
+        <p class="category__state">Aún no hay archivos aquí.</p>
       </div>
     }
     @case ('ready') {
-      <ul class="file-list">
-        @for (file of files(); track file.url) {
-          <li class="file-list__item">
-            <a class="file-card" [href]="file.url" target="_blank" rel="noopener">
-              <span class="file-card__icon" [style.background]="category.accentColor">
-                {{ fileGlyph(file.extension) }}
-              </span>
-              <span class="file-card__info">
-                <span class="file-card__name">{{ file.name }}</span>
-                <span class="file-card__meta">{{ file.extension.toUpperCase() || 'Archivo' }} · {{ file.sizeLabel }}</span>
-              </span>
-            </a>
-          </li>
-        }
-      </ul>
+      @if (sqlGroups().length) {
+        <section class="group group--wide">
+          <app-sql-explorer [groups]="sqlGroups()"></app-sql-explorer>
+        </section>
+      }
+
+      @for (section of sections(); track section.group.slug; let i = $index) {
+        <section class="group" [id]="'grupo-' + section.group.slug">
+          @if (section.group.title) {
+            <header class="group__head">
+              <span class="group__index" [style.color]="accentText">{{ (i + 1).toString().padStart(2, '0') }}</span>
+              <div>
+                <h2 class="group__title">{{ section.group.title }}</h2>
+                @if (section.group.description) {
+                  <p class="group__description">{{ section.group.description }}</p>
+                }
+              </div>
+            </header>
+          }
+
+          @for (sheetFile of section.sheets; track sheetFile.url) {
+            <app-sheet-viewer [file]="sheetFile"></app-sheet-viewer>
+          }
+
+          @if (section.others.length) {
+            <app-evidence-shelf [files]="section.others" [accent]="category.accentColor"></app-evidence-shelf>
+          }
+        </section>
+      }
+
+      @if (related().length) {
+        <section class="related" aria-label="Relacionado">
+          <p class="related__title">También puedes revisar</p>
+          <div class="related__list">
+            @for (file of related(); track file.url) {
+              <button type="button" class="related__card" (click)="openRelated(file)">
+                @if (file.cover) {
+                  <img class="related__cover" [src]="file.cover" alt="" loading="lazy">
+                }
+                <span class="related__info">
+                  <span class="related__meta">{{ categoryTitle(file.category) }} · {{ label(file) }}</span>
+                  <span class="related__name">{{ file.title }}</span>
+                  @if (file.description) {
+                    <span class="related__desc">{{ file.description }}</span>
+                  }
+                </span>
+              </button>
+            }
+          </div>
+        </section>
+      }
     }
   }
 </article>

@@ -3,8 +3,10 @@
 <app-paint-background></app-paint-background>
 <div class="canvas-texture" aria-hidden="true"></div>
 <app-navbar></app-navbar>
+<!-- Visor de evidencias a pantalla completa (fuera de .page para quedar encima del navbar) -->
+<app-evidence-viewer></app-evidence-viewer>
 
-<div class="page">
+<div class="page" [class.page--wide]="widePage()">
   <router-outlet></router-outlet>
 
   <footer class="footer">

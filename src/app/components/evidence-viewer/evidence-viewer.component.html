@@ -1,0 +1,119 @@
+@if (file(); as f) {
+  <div class="viewer" role="dialog" aria-modal="true" [attr.aria-label]="f.title">
+    <div class="viewer__backdrop" (click)="close()" aria-hidden="true"></div>
+
+    <header class="viewer__bar">
+      <div class="viewer__info">
+        <p class="viewer__eyebrow">
+          {{ typeLabel() }} · {{ f.sizeLabel }}
+          @if (position(); as p) {
+            @if (p.total > 1) {
+              <span class="viewer__count">· {{ p.index + 1 }} de {{ p.total }}</span>
+            }
+          }
+        </p>
+        <h2 class="viewer__title">{{ f.title }}</h2>
+      </div>
+
+      <div class="viewer__actions">
+        @if (kind() === 'image') {
+          <div class="zoom" role="group" aria-label="Zoom">
+            <button type="button" class="zoom__btn" (click)="zoomBy(0.8)" aria-label="Alejar">−</button>
+            <button type="button" class="zoom__label" (click)="fit()" title="Ajustar a la pantalla (0)">{{ zoomLabel() }}</button>
+            <button type="button" class="zoom__btn" (click)="zoomBy(1.25)" aria-label="Acercar">+</button>
+          </div>
+          <button type="button" class="icon-btn icon-btn--text" (click)="actualSize()" title="Ver a tamaño real">1:1</button>
+        }
+        <a class="icon-btn" [href]="openUrl()" target="_blank" rel="noopener" title="Abrir en una pestaña nueva" aria-label="Abrir en una pestaña nueva">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 4h6v6" /><path d="M20 4l-9 9" /><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+          </svg>
+        </a>
+        <a class="icon-btn" [href]="f.url" [attr.download]="f.downloadName" title="Descargar" aria-label="Descargar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 4v11" /><path d="M7 10l5 5 5-5" /><path d="M5 20h14" />
+          </svg>
+        </a>
+        <button type="button" class="icon-btn icon-btn--close" (click)="close()" aria-label="Cerrar (Esc)" title="Cerrar (Esc)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="viewer__body">
+      @switch (kind()) {
+        @case ('image') {
+          <div
+            #stage
+            class="stage"
+            [class.stage--dragging]="dragging()"
+            (wheel)="onWheel($event)"
+            (dblclick)="onDoubleClick($event)"
+            (pointerdown)="onPointerDown($event)"
+            (pointermove)="onPointerMove($event)"
+            (pointerup)="onPointerUp($event)"
+            (pointercancel)="onPointerUp($event)"
+          >
+            @if (!loaded()) {
+              <div class="stage__loading">
+                @if (f.cover) {
+                  <img class="stage__placeholder" [src]="f.cover" alt="" aria-hidden="true">
+                }
+                <span class="stage__spinner" aria-hidden="true"></span>
+                <span>Cargando imagen…</span>
+              </div>
+            }
+            <img
+              #img
+              class="stage__img"
+              [class.stage__img--ready]="loaded()"
+              [src]="f.url"
+              [alt]="f.title"
+              [style.transform]="transform()"
+              (load)="onImageLoad(img)"
+              draggable="false"
+            >
+          </div>
+          <p class="viewer__hint">Rueda o pellizco para acercar · arrastra para moverte · doble clic para ampliar</p>
+        }
+
+        @case ('pdf') {
+          @if (pdfInline) {
+            <iframe class="pdf" [src]="pdfSrc()" [title]="f.title"></iframe>
+          } @else {
+            <div class="fallback">
+              @if (f.cover) {
+                <img class="fallback__cover" [src]="f.cover" [alt]="'Portada de ' + f.title">
+              }
+              <p>Este navegador no muestra documentos dentro de la página.</p>
+              <a class="fallback__btn" [href]="openUrl()" target="_blank" rel="noopener">Abrir el documento</a>
+            </div>
+          }
+          @if (f.kind === 'document') {
+            <p class="viewer__hint">Vista previa del documento de Word. Al descargarlo recibes el archivo .{{ f.extension }} original.</p>
+          }
+        }
+
+        @default {
+          <div class="fallback">
+            <p>Este archivo no se puede ver dentro de la página, pero puedes descargarlo.</p>
+            <a class="fallback__btn" [href]="f.url" [attr.download]="f.downloadName">Descargar {{ f.name }}</a>
+          </div>
+        }
+      }
+
+      @if (position(); as p) {
+        @if (p.total > 1) {
+          <button type="button" class="nav nav--prev" (click)="previous()" aria-label="Anterior (←)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+          </button>
+          <button type="button" class="nav nav--next" (click)="next()" aria-label="Siguiente (→)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+          </button>
+        }
+      }
+    </div>
+  </div>
+}

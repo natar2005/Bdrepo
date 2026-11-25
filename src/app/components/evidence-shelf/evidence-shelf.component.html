@@ -1,0 +1,85 @@
+<div class="shelf" [class.shelf--landscape]="landscape" [style.--accent]="accent" [style.--accent-ink]="ink">
+  @for (file of files; track file.url) {
+    @if (file.featured) {
+      <article class="feature">
+        <button type="button" class="feature__cover" (click)="open(file)" [attr.aria-label]="'Leer ' + file.title">
+          @if (file.cover) {
+            <img [src]="file.cover" alt="" loading="lazy">
+          }
+        </button>
+        <div class="feature__body">
+          @if (file.tag) {
+            <p class="feature__tag">{{ file.tag }}</p>
+          }
+          <h3 class="feature__title">{{ file.title }}</h3>
+          @if (file.description) {
+            <p class="feature__desc">{{ file.description }}</p>
+          }
+          <div class="feature__actions">
+            <button type="button" class="btn btn--primary" (click)="open(file)">Leer el documento</button>
+            <a class="btn" [href]="file.url" [attr.download]="file.downloadName">Descargar {{ label(file) }} · {{ file.sizeLabel }}</a>
+          </div>
+        </div>
+      </article>
+    } @else {
+      <article class="card">
+        @if (previewable(file)) {
+          <button type="button" class="card__cover" (click)="open(file)" [attr.aria-label]="'Ver ' + file.title">
+            @if (file.cover) {
+              <img [src]="file.cover" alt="" loading="lazy">
+            } @else {
+              <span class="card__glyph">{{ label(file) }}</span>
+            }
+            <span class="card__zoom" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6" /><path d="M20 20l-4.5-4.5M11 8.5v5M8.5 11h5" /></svg>
+            </span>
+          </button>
+        } @else {
+          <a class="card__cover" [href]="file.url" [attr.download]="file.downloadName" [attr.aria-label]="'Descargar ' + file.title">
+            @if (file.cover) {
+              <img [src]="file.cover" alt="" loading="lazy">
+            } @else {
+              <span class="card__glyph">{{ label(file) }}</span>
+            }
+          </a>
+        }
+
+        <div class="card__body">
+          <p class="card__meta">
+            <span class="chip">{{ label(file) }}</span>
+            @if (file.tag) {
+              <span class="chip chip--tag">{{ file.tag }}</span>
+            }
+          </p>
+          <h3 class="card__title">{{ file.title }}</h3>
+          @if (file.description) {
+            <p class="card__desc">{{ file.description }}</p>
+          }
+
+          <div class="card__actions">
+            @if (previewable(file)) {
+              <button type="button" class="link link--strong" (click)="open(file)">Ver</button>
+            }
+            <a class="link" [href]="file.url" [attr.download]="file.downloadName">
+              Descargar <span class="link__size">{{ file.sizeLabel }}</span>
+            </a>
+          </div>
+
+          @if (file.attachments?.length) {
+            <ul class="attachments">
+              @for (att of file.attachments; track att.url) {
+                <li>
+                  <a class="attachment" [href]="att.url" [attr.download]="att.downloadName">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5l-8.3 8.3a5 5 0 0 1-7-7l8.6-8.6a3.4 3.4 0 0 1 4.8 4.8l-8.6 8.6a1.7 1.7 0 0 1-2.4-2.4l7.9-7.9" /></svg>
+                    <span>{{ att.title }}</span>
+                    <span class="attachment__meta">{{ extensionOf(att.name) }} · {{ att.sizeLabel }}</span>
+                  </a>
+                </li>
+              }
+            </ul>
+          }
+        </div>
+      </article>
+    }
+  }
+</div>

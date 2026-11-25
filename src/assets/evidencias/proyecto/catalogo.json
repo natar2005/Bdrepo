@@ -1,0 +1,133 @@
+{
+  "introduccion": "ArchiveLudo es nuestro proyecto final: una plataforma para la conservación y documentación del patrimonio de videojuegos. Lo hicimos en equipo con Tomás Triana y Juan Carlos Morales, y aquí está todo lo que entregamos, desde la propuesta hasta el acta de cierre.",
+  "grupos": [
+    {
+      "carpeta": "documento-principal",
+      "titulo": "Documento principal",
+      "archivos": {
+        "documento-principal-archiveludo.pdf": {
+          "titulo": "ArchiveLudo: Plataforma para la Conservación y Documentación del Patrimonio de Videojuegos",
+          "descripcion": "El documento que reúne todo el proyecto, de principio a fin.",
+          "etiqueta": "Entrega final",
+          "destacado": true
+        }
+      }
+    },
+    {
+      "carpeta": "planeacion",
+      "titulo": "Planeación y gestión",
+      "descripcion": "Cómo arrancamos el proyecto y cómo organizamos el trabajo.",
+      "archivos": {
+        "propuesta-proyecto.pdf": {
+          "titulo": "Propuesta de proyecto final",
+          "descripcion": "La propuesta inicial: el problema de la preservación de videojuegos y por qué una base de datos ayuda a resolverlo."
+        },
+        "acta-de-constitucion.docx": {
+          "titulo": "Acta de constitución",
+          "descripcion": "Propósito, alcance, requerimientos, objetivos, riesgos, hitos y equipo con los que se formalizó el proyecto."
+        },
+        "cronograma.docx": {
+          "titulo": "Cronograma",
+          "descripcion": "Las actividades y entregables del 20 de septiembre al 6 de noviembre, divididos en fases."
+        },
+        "edt-general.png": {
+          "titulo": "EDT general",
+          "descripcion": "Estructura de desglose del trabajo de todo el proyecto, por fases."
+        },
+        "edt-backend.png": {
+          "titulo": "EDT del backend",
+          "descripcion": "El trabajo del backend en Spring Boot dividido en paquetes de trabajo."
+        },
+        "edt-frontend.png": {
+          "titulo": "EDT del frontend",
+          "descripcion": "El trabajo del frontend en Angular dividido por pantallas y funciones."
+        },
+        "documento-de-supuestos.docx": {
+          "titulo": "Documento de supuestos",
+          "descripcion": "Las reglas del negocio que asumimos para cada entidad. De aquí salieron las restricciones de la base de datos."
+        }
+      }
+    },
+    {
+      "carpeta": "diseno-bd",
+      "titulo": "Diseño de la base de datos",
+      "descripcion": "Los modelos completos están en la sección Modelo; aquí está el análisis que los acompaña.",
+      "archivos": {
+        "normalizacion-archiveludo.pdf": {
+          "titulo": "Proceso de normalización y desnormalización",
+          "descripcion": "Desde la forma no normalizada hasta la 3FN, con las dependencias encontradas en cada paso y las decisiones de desnormalización."
+        },
+        "algebra-relacional.pdf": {
+          "titulo": "Álgebra relacional",
+          "descripcion": "60 sentencias de álgebra relacional sobre el modelo del proyecto, agrupadas por operador."
+        }
+      }
+    },
+    {
+      "carpeta": "implementacion",
+      "titulo": "Implementación",
+      "descripcion": "De elegir el motor y el sistema operativo hasta conectar la aplicación con la base de datos en la nube.",
+      "archivos": {
+        "seleccion-rdbms.pdf": {
+          "titulo": "Selección del RDBMS",
+          "descripcion": "La comparación de seis motores con una matriz de decisión, y por qué elegimos MySQL en MySQL HeatWave."
+        },
+        "seleccion-sistema-operativo.pdf": {
+          "titulo": "Selección del sistema operativo",
+          "descripcion": "La comparación de distribuciones Linux y Unix con una matriz de decisión, y por qué elegimos Oracle Linux 9."
+        },
+        "implementacion-maquina-virtual.pdf": {
+          "titulo": "Implementación de la máquina virtual",
+          "descripcion": "Por qué la desplegamos en Oracle Cloud y cómo se armó: red virtual, instancia, acceso por SSH y conexión con MySQL HeatWave."
+        },
+        "implementacion-rdbms.pdf": {
+          "titulo": "Implementación del RDBMS",
+          "descripcion": "El sistema de base de datos en MySQL HeatWave: copias de seguridad, usuarios y privilegios, paso al modelo físico, carga de datos y pruebas."
+        },
+        "scripts-implementacion.pdf": {
+          "titulo": "Scripts de implementación",
+          "descripcion": "Los ocho scripts SQL que pasan el modelo lógico al modelo físico, con su orden de ejecución y los resultados de la validación."
+        },
+        "conexion-aplicacion-bd.pdf": {
+          "titulo": "Conexión de la aplicación a la base de datos",
+          "descripcion": "Cómo el backend en Spring Boot se conecta a MySQL: configuración, acceso a datos con Spring JDBC, transacciones y manejo de errores."
+        }
+      }
+    },
+    {
+      "carpeta": "aplicacion",
+      "titulo": "La aplicación",
+      "descripcion": "La aplicación web que usa la base de datos.",
+      "archivos": {
+        "diagrama-uml.png": {
+          "titulo": "Diagrama de clases (UML)",
+          "descripcion": "Las clases del backend: entidades, DTO, repositorios, servicios y controladores.",
+          "adjuntos": [
+            "diagrama-uml-resolucion-completa.png"
+          ]
+        },
+        "diagrama-navegacion.png": {
+          "titulo": "Diagrama de navegación",
+          "descripcion": "Las pantallas de la aplicación y cómo se pasa de una a otra según el rol del usuario."
+        },
+        "manual-de-usuario.docx": {
+          "titulo": "Manual de usuario",
+          "descripcion": "Cómo usar ArchiveLudo: entrar, recorrer las pantallas y lo que puede hacer cada rol."
+        },
+        "diagrama-uml-resolucion-completa.png": {
+          "titulo": "Imagen en resolución completa"
+        }
+      }
+    },
+    {
+      "carpeta": "cierre",
+      "titulo": "Cierre",
+      "archivos": {
+        "acta-de-cierre.docx": {
+          "titulo": "Acta de cierre del proyecto",
+          "descripcion": "Formaliza el cierre: resume lo que se entregó y revisa cada objetivo contra lo planeado en el acta de constitución."
+        }
+      }
+    }
+  ]
+}

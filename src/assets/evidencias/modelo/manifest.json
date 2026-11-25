@@ -1,5 +1,447 @@
 {
   "category": "modelo",
-  "generatedAt": "2026-08-09T03:33:51.093Z",
-  "files": []
+  "generatedAt": "2026-11-25T04:48:44.455Z",
+  "intro": "Aquí está el recorrido de los modelos que trabajé en el semestre: desde los primeros apuntes, pasando por el taller de la aerolínea, hasta el modelo completo del proyecto final ArchiveLudo. Puedes abrir cualquier diagrama, acercarte y moverte por él para ver los detalles.",
+  "groups": [
+    {
+      "slug": "apuntes",
+      "title": "Primeros apuntes",
+      "description": "Así empezó todo: identificar entidades y sus atributos a mano, antes de pasar a los diagramas.",
+      "files": [
+        {
+          "name": "primer-modelo-artista-cancion-album.jpeg",
+          "url": "assets/evidencias/modelo/apuntes/primer-modelo-artista-cancion-album.jpeg",
+          "extension": "jpeg",
+          "kind": "image",
+          "sizeBytes": 193879,
+          "sizeLabel": "189.3 KB",
+          "title": "Artista, canción y álbum",
+          "description": "Uno de los primeros ejercicios de clase: reconocer las entidades de una aplicación de música y listar sus atributos.",
+          "tag": "A mano",
+          "cover": "assets/evidencias/modelo/apuntes/_portadas/primer-modelo-artista-cancion-album.webp",
+          "width": 933,
+          "height": 1330,
+          "downloadName": "Artista, canción y álbum.jpeg"
+        }
+      ]
+    },
+    {
+      "slug": "taller-aerolinea",
+      "title": "Taller 1 · Aerolínea",
+      "description": "El primer caso completo del curso: vuelos, rutas, aviones, tripulantes, pasajeros e insumos. Lo llevé del modelo entidad-relación hasta el modelo relacional.",
+      "files": [
+        {
+          "name": "01-mer-chen-aerolinea.png",
+          "url": "assets/evidencias/modelo/taller-aerolinea/01-mer-chen-aerolinea.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 77388,
+          "sizeLabel": "75.6 KB",
+          "title": "Modelo entidad-relación (Peter Chen)",
+          "description": "Entidades, atributos y relaciones del caso, con la agregación ASIGNACIÓN y la jerarquía de tripulantes (pilotos y auxiliares).",
+          "tag": "draw.io",
+          "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/01-mer-chen-aerolinea.webp",
+          "width": 2782,
+          "height": 2740,
+          "downloadName": "Modelo entidad-relación (Peter Chen).png"
+        },
+        {
+          "name": "02-reduccion-a-tablas-aerolinea.png",
+          "url": "assets/evidencias/modelo/taller-aerolinea/02-reduccion-a-tablas-aerolinea.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 102428,
+          "sizeLabel": "100.0 KB",
+          "title": "Reducción a tablas",
+          "description": "El mismo modelo después de aplicar las reglas de reducción: aparecen tablas como PAS_VUELO, VUE_TRI y PRO_INS_VUE.",
+          "tag": "draw.io",
+          "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/02-reduccion-a-tablas-aerolinea.webp",
+          "width": 3612,
+          "height": 2917,
+          "downloadName": "Reducción a tablas.png"
+        },
+        {
+          "name": "03-modelo-logico-aerolinea.png",
+          "url": "assets/evidencias/modelo/taller-aerolinea/03-modelo-logico-aerolinea.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 267365,
+          "sizeLabel": "261.1 KB",
+          "title": "Modelo lógico (Crow's Foot)",
+          "description": "Las tablas resultantes en Oracle SQL Data Modeler, con sus identificadores y la cardinalidad de cada relación en notación pata de gallo.",
+          "tag": "Data Modeler",
+          "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/03-modelo-logico-aerolinea.webp",
+          "width": 6036,
+          "height": 4188,
+          "downloadName": "Modelo lógico (Crow's Foot).png",
+          "attachments": [
+            {
+              "name": "taller-1-data-modeler.zip",
+              "url": "assets/evidencias/modelo/taller-aerolinea/taller-1-data-modeler.zip",
+              "extension": "zip",
+              "sizeLabel": "122.1 KB",
+              "title": "Proyecto de Data Modeler",
+              "downloadName": "Proyecto de Data Modeler.zip"
+            }
+          ]
+        },
+        {
+          "name": "04-modelo-relacional-aerolinea.png",
+          "url": "assets/evidencias/modelo/taller-aerolinea/04-modelo-relacional-aerolinea.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 282097,
+          "sizeLabel": "275.5 KB",
+          "title": "Modelo relacional",
+          "description": "Tablas con sus llaves primarias (P), foráneas (F) y columnas obligatorias (*), generadas desde el modelo lógico.",
+          "tag": "Data Modeler",
+          "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/04-modelo-relacional-aerolinea.webp",
+          "width": 6036,
+          "height": 4188,
+          "downloadName": "Modelo relacional.png",
+          "attachments": [
+            {
+              "name": "taller-1-data-modeler.zip",
+              "url": "assets/evidencias/modelo/taller-aerolinea/taller-1-data-modeler.zip",
+              "extension": "zip",
+              "sizeLabel": "122.1 KB",
+              "title": "Proyecto de Data Modeler",
+              "downloadName": "Proyecto de Data Modeler.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "archiveludo",
+      "title": "Proyecto final · ArchiveLudo",
+      "description": "Una plataforma para preservar y documentar videojuegos. Estos son todos los modelos del proyecto, en el orden en que los fuimos construyendo.",
+      "files": [
+        {
+          "name": "01-mer-chen-archiveludo.png",
+          "url": "assets/evidencias/modelo/archiveludo/01-mer-chen-archiveludo.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 63189,
+          "sizeLabel": "61.7 KB",
+          "title": "Modelo entidad-relación (Peter Chen)",
+          "description": "Videojuegos, copias, custodias, instituciones, estatus legal, eventos de riesgo, proyectos de restauración y expertos, con la participación y cardinalidad de cada relación.",
+          "tag": "draw.io",
+          "cover": "assets/evidencias/modelo/archiveludo/_portadas/01-mer-chen-archiveludo.webp",
+          "width": 2305,
+          "height": 1868,
+          "downloadName": "Modelo entidad-relación (Peter Chen).png"
+        },
+        {
+          "name": "02-mer-extendido-archiveludo.png",
+          "url": "assets/evidencias/modelo/archiveludo/02-mer-extendido-archiveludo.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 70193,
+          "sizeLabel": "68.5 KB",
+          "title": "Modelo entidad-relación extendido",
+          "description": "Agrega la especialización de COPIA en copia física y copia digital, cada una con sus propios atributos.",
+          "tag": "draw.io",
+          "cover": "assets/evidencias/modelo/archiveludo/_portadas/02-mer-extendido-archiveludo.webp",
+          "width": 2605,
+          "height": 1998,
+          "downloadName": "Modelo entidad-relación extendido.png"
+        },
+        {
+          "name": "03-mer-crowsfoot-archiveludo.png",
+          "url": "assets/evidencias/modelo/archiveludo/03-mer-crowsfoot-archiveludo.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 238750,
+          "sizeLabel": "233.2 KB",
+          "title": "MER en Crow's Foot",
+          "description": "El modelo entidad-relación pasado a Oracle SQL Data Modeler con notación pata de gallo.",
+          "tag": "Data Modeler",
+          "cover": "assets/evidencias/modelo/archiveludo/_portadas/03-mer-crowsfoot-archiveludo.webp",
+          "width": 4983,
+          "height": 3990,
+          "downloadName": "MER en Crow's Foot.png",
+          "attachments": [
+            {
+              "name": "mer-crowsfoot-data-modeler.zip",
+              "url": "assets/evidencias/modelo/archiveludo/mer-crowsfoot-data-modeler.zip",
+              "extension": "zip",
+              "sizeLabel": "64.0 KB",
+              "title": "Proyecto de Data Modeler",
+              "downloadName": "Proyecto de Data Modeler.zip"
+            }
+          ]
+        },
+        {
+          "name": "04-mer-e-crowsfoot-archiveludo.png",
+          "url": "assets/evidencias/modelo/archiveludo/04-mer-e-crowsfoot-archiveludo.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 245742,
+          "sizeLabel": "240.0 KB",
+          "title": "MER extendido en Crow's Foot",
+          "description": "La jerarquía de COPIA queda dentro del supertipo, como la dibuja Data Modeler.",
+          "tag": "Data Modeler",
+          "cover": "assets/evidencias/modelo/archiveludo/_portadas/04-mer-e-crowsfoot-archiveludo.webp",
+          "width": 4983,
+          "height": 3990,
+          "downloadName": "MER extendido en Crow's Foot.png",
+          "attachments": [
+            {
+              "name": "mer-e-crowsfoot-data-modeler.zip",
+              "url": "assets/evidencias/modelo/archiveludo/mer-e-crowsfoot-data-modeler.zip",
+              "extension": "zip",
+              "sizeLabel": "76.6 KB",
+              "title": "Proyecto de Data Modeler",
+              "downloadName": "Proyecto de Data Modeler.zip"
+            }
+          ]
+        },
+        {
+          "name": "05-modelo-relacional-archiveludo.png",
+          "url": "assets/evidencias/modelo/archiveludo/05-modelo-relacional-archiveludo.png",
+          "extension": "png",
+          "kind": "image",
+          "sizeBytes": 283215,
+          "sizeLabel": "276.6 KB",
+          "title": "Modelo relacional",
+          "description": "Las 17 tablas finales con sus llaves primarias, foráneas y únicas. Es el modelo que después implementamos en MySQL.",
+          "tag": "Data Modeler",
+          "cover": "assets/evidencias/modelo/archiveludo/_portadas/05-modelo-relacional-archiveludo.webp",
+          "width": 4983,
+          "height": 3990,
+          "downloadName": "Modelo relacional.png",
+          "attachments": [
+            {
+              "name": "modelo-relacional-data-modeler.zip",
+              "url": "assets/evidencias/modelo/archiveludo/modelo-relacional-data-modeler.zip",
+              "extension": "zip",
+              "sizeLabel": "138.2 KB",
+              "title": "Proyecto de Data Modeler",
+              "downloadName": "Proyecto de Data Modeler.zip"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "related": [
+    {
+      "name": "diagrama-uml.png",
+      "url": "assets/evidencias/proyecto/aplicacion/diagrama-uml.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 2361937,
+      "sizeLabel": "2.3 MB",
+      "title": "Diagrama de clases de la aplicación",
+      "description": "Cómo se ven las tablas del modelo dentro del código del backend.",
+      "cover": "assets/evidencias/proyecto/aplicacion/_portadas/diagrama-uml.webp",
+      "width": 6400,
+      "height": 4828,
+      "downloadName": "Diagrama de clases de la aplicación.png",
+      "category": "proyecto"
+    }
+  ],
+  "files": [
+    {
+      "name": "primer-modelo-artista-cancion-album.jpeg",
+      "url": "assets/evidencias/modelo/apuntes/primer-modelo-artista-cancion-album.jpeg",
+      "extension": "jpeg",
+      "kind": "image",
+      "sizeBytes": 193879,
+      "sizeLabel": "189.3 KB",
+      "title": "Artista, canción y álbum",
+      "description": "Uno de los primeros ejercicios de clase: reconocer las entidades de una aplicación de música y listar sus atributos.",
+      "tag": "A mano",
+      "cover": "assets/evidencias/modelo/apuntes/_portadas/primer-modelo-artista-cancion-album.webp",
+      "width": 933,
+      "height": 1330,
+      "downloadName": "Artista, canción y álbum.jpeg"
+    },
+    {
+      "name": "01-mer-chen-aerolinea.png",
+      "url": "assets/evidencias/modelo/taller-aerolinea/01-mer-chen-aerolinea.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 77388,
+      "sizeLabel": "75.6 KB",
+      "title": "Modelo entidad-relación (Peter Chen)",
+      "description": "Entidades, atributos y relaciones del caso, con la agregación ASIGNACIÓN y la jerarquía de tripulantes (pilotos y auxiliares).",
+      "tag": "draw.io",
+      "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/01-mer-chen-aerolinea.webp",
+      "width": 2782,
+      "height": 2740,
+      "downloadName": "Modelo entidad-relación (Peter Chen).png"
+    },
+    {
+      "name": "02-reduccion-a-tablas-aerolinea.png",
+      "url": "assets/evidencias/modelo/taller-aerolinea/02-reduccion-a-tablas-aerolinea.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 102428,
+      "sizeLabel": "100.0 KB",
+      "title": "Reducción a tablas",
+      "description": "El mismo modelo después de aplicar las reglas de reducción: aparecen tablas como PAS_VUELO, VUE_TRI y PRO_INS_VUE.",
+      "tag": "draw.io",
+      "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/02-reduccion-a-tablas-aerolinea.webp",
+      "width": 3612,
+      "height": 2917,
+      "downloadName": "Reducción a tablas.png"
+    },
+    {
+      "name": "03-modelo-logico-aerolinea.png",
+      "url": "assets/evidencias/modelo/taller-aerolinea/03-modelo-logico-aerolinea.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 267365,
+      "sizeLabel": "261.1 KB",
+      "title": "Modelo lógico (Crow's Foot)",
+      "description": "Las tablas resultantes en Oracle SQL Data Modeler, con sus identificadores y la cardinalidad de cada relación en notación pata de gallo.",
+      "tag": "Data Modeler",
+      "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/03-modelo-logico-aerolinea.webp",
+      "width": 6036,
+      "height": 4188,
+      "downloadName": "Modelo lógico (Crow's Foot).png",
+      "attachments": [
+        {
+          "name": "taller-1-data-modeler.zip",
+          "url": "assets/evidencias/modelo/taller-aerolinea/taller-1-data-modeler.zip",
+          "extension": "zip",
+          "sizeLabel": "122.1 KB",
+          "title": "Proyecto de Data Modeler",
+          "downloadName": "Proyecto de Data Modeler.zip"
+        }
+      ]
+    },
+    {
+      "name": "04-modelo-relacional-aerolinea.png",
+      "url": "assets/evidencias/modelo/taller-aerolinea/04-modelo-relacional-aerolinea.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 282097,
+      "sizeLabel": "275.5 KB",
+      "title": "Modelo relacional",
+      "description": "Tablas con sus llaves primarias (P), foráneas (F) y columnas obligatorias (*), generadas desde el modelo lógico.",
+      "tag": "Data Modeler",
+      "cover": "assets/evidencias/modelo/taller-aerolinea/_portadas/04-modelo-relacional-aerolinea.webp",
+      "width": 6036,
+      "height": 4188,
+      "downloadName": "Modelo relacional.png",
+      "attachments": [
+        {
+          "name": "taller-1-data-modeler.zip",
+          "url": "assets/evidencias/modelo/taller-aerolinea/taller-1-data-modeler.zip",
+          "extension": "zip",
+          "sizeLabel": "122.1 KB",
+          "title": "Proyecto de Data Modeler",
+          "downloadName": "Proyecto de Data Modeler.zip"
+        }
+      ]
+    },
+    {
+      "name": "01-mer-chen-archiveludo.png",
+      "url": "assets/evidencias/modelo/archiveludo/01-mer-chen-archiveludo.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 63189,
+      "sizeLabel": "61.7 KB",
+      "title": "Modelo entidad-relación (Peter Chen)",
+      "description": "Videojuegos, copias, custodias, instituciones, estatus legal, eventos de riesgo, proyectos de restauración y expertos, con la participación y cardinalidad de cada relación.",
+      "tag": "draw.io",
+      "cover": "assets/evidencias/modelo/archiveludo/_portadas/01-mer-chen-archiveludo.webp",
+      "width": 2305,
+      "height": 1868,
+      "downloadName": "Modelo entidad-relación (Peter Chen).png"
+    },
+    {
+      "name": "02-mer-extendido-archiveludo.png",
+      "url": "assets/evidencias/modelo/archiveludo/02-mer-extendido-archiveludo.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 70193,
+      "sizeLabel": "68.5 KB",
+      "title": "Modelo entidad-relación extendido",
+      "description": "Agrega la especialización de COPIA en copia física y copia digital, cada una con sus propios atributos.",
+      "tag": "draw.io",
+      "cover": "assets/evidencias/modelo/archiveludo/_portadas/02-mer-extendido-archiveludo.webp",
+      "width": 2605,
+      "height": 1998,
+      "downloadName": "Modelo entidad-relación extendido.png"
+    },
+    {
+      "name": "03-mer-crowsfoot-archiveludo.png",
+      "url": "assets/evidencias/modelo/archiveludo/03-mer-crowsfoot-archiveludo.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 238750,
+      "sizeLabel": "233.2 KB",
+      "title": "MER en Crow's Foot",
+      "description": "El modelo entidad-relación pasado a Oracle SQL Data Modeler con notación pata de gallo.",
+      "tag": "Data Modeler",
+      "cover": "assets/evidencias/modelo/archiveludo/_portadas/03-mer-crowsfoot-archiveludo.webp",
+      "width": 4983,
+      "height": 3990,
+      "downloadName": "MER en Crow's Foot.png",
+      "attachments": [
+        {
+          "name": "mer-crowsfoot-data-modeler.zip",
+          "url": "assets/evidencias/modelo/archiveludo/mer-crowsfoot-data-modeler.zip",
+          "extension": "zip",
+          "sizeLabel": "64.0 KB",
+          "title": "Proyecto de Data Modeler",
+          "downloadName": "Proyecto de Data Modeler.zip"
+        }
+      ]
+    },
+    {
+      "name": "04-mer-e-crowsfoot-archiveludo.png",
+      "url": "assets/evidencias/modelo/archiveludo/04-mer-e-crowsfoot-archiveludo.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 245742,
+      "sizeLabel": "240.0 KB",
+      "title": "MER extendido en Crow's Foot",
+      "description": "La jerarquía de COPIA queda dentro del supertipo, como la dibuja Data Modeler.",
+      "tag": "Data Modeler",
+      "cover": "assets/evidencias/modelo/archiveludo/_portadas/04-mer-e-crowsfoot-archiveludo.webp",
+      "width": 4983,
+      "height": 3990,
+      "downloadName": "MER extendido en Crow's Foot.png",
+      "attachments": [
+        {
+          "name": "mer-e-crowsfoot-data-modeler.zip",
+          "url": "assets/evidencias/modelo/archiveludo/mer-e-crowsfoot-data-modeler.zip",
+          "extension": "zip",
+          "sizeLabel": "76.6 KB",
+          "title": "Proyecto de Data Modeler",
+          "downloadName": "Proyecto de Data Modeler.zip"
+        }
+      ]
+    },
+    {
+      "name": "05-modelo-relacional-archiveludo.png",
+      "url": "assets/evidencias/modelo/archiveludo/05-modelo-relacional-archiveludo.png",
+      "extension": "png",
+      "kind": "image",
+      "sizeBytes": 283215,
+      "sizeLabel": "276.6 KB",
+      "title": "Modelo relacional",
+      "description": "Las 17 tablas finales con sus llaves primarias, foráneas y únicas. Es el modelo que después implementamos en MySQL.",
+      "tag": "Data Modeler",
+      "cover": "assets/evidencias/modelo/archiveludo/_portadas/05-modelo-relacional-archiveludo.webp",
+      "width": 4983,
+      "height": 3990,
+      "downloadName": "Modelo relacional.png",
+      "attachments": [
+        {
+          "name": "modelo-relacional-data-modeler.zip",
+          "url": "assets/evidencias/modelo/archiveludo/modelo-relacional-data-modeler.zip",
+          "extension": "zip",
+          "sizeLabel": "138.2 KB",
+          "title": "Proyecto de Data Modeler",
+          "downloadName": "Proyecto de Data Modeler.zip"
+        }
+      ]
+    }
+  ]
 }
